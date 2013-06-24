@@ -21,5 +21,5 @@
 ;(def fe (midi/parse-midi-file "/home/vishnu/Downloads/beethoven_fur_elise.mid" 1))
 
 (defn play [& songs]
-  (player/play (player/note-freq songs) (player/volume-freq songs) (player/duration-freq songs)))
+  (player/play (player/note-freq songs) (player/duration-freq songs)))
 

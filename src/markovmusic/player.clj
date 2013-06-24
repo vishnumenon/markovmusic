@@ -11,20 +11,18 @@
 (defn play-note [midinote sustain vol]
   (saw-wave (midi->hz midinote) sustain vol))
 
-(defn play [note-matrix volume-matrix duration-matrix]
+(defn play [note-matrix duration-matrix]
   (loop [note-count 1
          sound (first (keys note-matrix))
-         volume (first (keys volume-matrix))
         duration (first (keys duration-matrix))]
            (do
              (doseq [note sound]
-               (play-note note (/ duration 1000.0) (/ volume 128.0)))
+               (play-note note (/ duration 1000.0) (/ 70 128.0)))
              (Thread/sleep duration)
-             (println (str "Playing Note #" note-count ", pitch(es): " (clojure.string/join " & " sound) ", velocity: " volume ", duration: " duration))
+             (println (str "Playing Note #" note-count ", pitch(es): " (clojure.string/join " & " sound) ", velocity: " 70 ", duration: " duration))
              (recur
                (inc note-count)
                (chain/make-choice (get note-matrix sound {(rand-nth (keys note-matrix)) 1}))
-               (chain/make-choice (get volume-matrix volume {(rand-nth (keys volume-matrix)) 1}))
                (chain/make-choice (get duration-matrix duration {(rand-nth (keys duration-matrix)) 1}))))))
 
 (defn random-play []
