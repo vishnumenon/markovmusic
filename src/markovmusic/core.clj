@@ -11,8 +11,6 @@
 (def oj (midi/parse-midi-file "/home/vishnu/Downloads/beethoven_ode_to_joy.mid" 1))
 (def sf (midi/parse-midi-file "/home/vishnu/Downloads/scarborough_fair.mid" 1))
 
-
-
 (defn play [& songs]
-  (player/play (player/note-freq songs) (player/duration-freq songs)))
+  (player/play (player/note-matrix songs) (player/duration-matrix songs)))
 

@@ -53,6 +53,5 @@
         (Thread/sleep duration)
         (println (str "Playing Pitch(es): " (clojure.string/join " & " sound) ", velocity: " volume ", duration: " duration))))))
 
-(defn note-freq [songs] (chain/frequency-to-probability (reduce #(chain/generate-frequency-matrix %2 chain/get-notes %1) {} songs)))
-(defn volume-freq [songs] (chain/frequency-to-probability (reduce #(chain/generate-frequency-matrix %2 chain/get-volume %1) {} songs)))
-(defn duration-freq [songs] (chain/frequency-to-probability (reduce #(chain/generate-frequency-matrix %2 chain/get-duration %1) {} songs)))
+(defn note-matrix [songs] (chain/frequency-to-probability (reduce #(chain/generate-frequency-matrix %2 chain/get-notes %1) {} songs)))
+(defn duration-matrix [songs] (chain/frequency-to-probability (reduce #(chain/generate-frequency-matrix %2 chain/get-duration %1) {} songs)))
