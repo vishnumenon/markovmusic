@@ -18,12 +18,6 @@
     ((get song position)
      :sound)))
 
-(defn get-volume [song position]
-  (let [vels (vals ((get song position) :sound))
-        vels-count (count vels)
-        vels-sum (reduce + vels)]
-    (if (> (* vels-count vels-sum) 0) (/ (reduce + vels) vels-count) 72)))
-
 (defn get-duration [song position]
   ((get song position) :duration))
 
