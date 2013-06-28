@@ -8,7 +8,10 @@
            cummulative-probability (nth probabilities 0)]
       (if (< r cummulative-probability)
         (nth items i)
-        (recur (inc i) (+ cummulative-probability (nth probabilities (inc i))))))))
+        (recur 
+          (inc i) 
+          (+ cummulative-probability 
+             (nth probabilities (inc i))))))))
 
 (defn val-inc [t r c]
   (assoc-in t [r c] (inc (get-in t [r c] 0))))
@@ -23,9 +26,13 @@
 
 (defn generate-frequency-matrix
   ([song func] (generate-frequency-matrix song func {}))
-  ([song func matrix] (if (< (count song) 2)
-                       matrix
-                       (recur (vec (rest song)) func (val-inc matrix (func song 0) (func song 1))))))
+  ([song func matrix] 
+   (if (< (count song) 2)
+     matrix
+     (recur 
+       (vec (rest song)) 
+       func 
+       (val-inc matrix (func song 0) (func song 1))))))
 
 (defn mapmap [f m]
   (reduce #(assoc %1 %2 (f (m %2))) {} (keys m)))

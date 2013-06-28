@@ -1,0 +1,1610 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f3ed80c0d31, pid=8131, tid=139907545908992
+#
+# JRE version: 7.0_21-b02
+# Java VM: OpenJDK 64-Bit Server VM (23.7-b01 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libscsynth.so+0x3ad31]  World_WaitForQuit+0x1
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please include
+# instructions on how to reproduce the bug and visit:
+#   https://bugs.launchpad.net/ubuntu/+source/openjdk-7/
+# The crash happened outside the Java Virtual Machine in native code.
+# See problematic frame for where to report the bug.
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f3f00c0f800):  JavaThread "Thread-5" daemon [_thread_in_native, id=8180, stack(0x00007f3ec3834000,0x00007f3ec3935000)]
+
+siginfo:si_signo=SIGSEGV: si_errno=0, si_code=1 (SEGV_MAPERR), si_addr=0x0000000000000000
+
+Registers:
+RAX=0x0000000000000000, RBX=0x0000000000000000, RCX=0x00007f3ec39330c0, RDX=0x00007f3ec3933190
+RSP=0x00007f3ec3932fd0, RBP=0x00007f3ec3932fe0, RSI=0x00007f3e9c0c5918, RDI=0x0000000000000000
+R8 =0x00007f3f00c0f800, R9 =0x00007f3e9c0c5940, R10=0x00007f3ec3932f30, R11=0x00007f3ed80c0d30
+R12=0x00007f3ec3932fe0, R13=0x00007f3f00675270, R14=0x00007f3ec3933690, R15=0x0000000000000008
+RIP=0x00007f3ed80c0d31, EFLAGS=0x0000000000010246, CSGSFS=0x0000000000000033, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007f3ec3932fd0)
+0x00007f3ec3932fd0:   0000000000000000 00007f3ee804ac18
+0x00007f3ec3932fe0:   0000000000000000 00007f3ec3933820
+0x00007f3ec3932ff0:   00007f3ec39330d0 00007f3ee804a580
+0x00007f3ec3933000:   000000077a41c3a8 00000007854ff168
+0x00007f3ec3933010:   00007f3ec39338a8 00007f3ec3932f30
+0x00007f3ec3933020:   0000000000000000 00007f3ec3933780
+0x00007f3ec3933030:   0000000700000001 00007f3f00000000
+0x00007f3ec3933040:   00007f3ed80c0d30 00007f3ec3933820
+0x00007f3ec3933050:   00007f3f006751e0 00007f3ec3932f30
+0x00007f3ec3933060:   0000000100000000 0000000000000008
+0x00007f3ec3933070:   00007f3f00c0f800 0000000000000001
+0x00007f3ec3933080:   00007f3e00000001 00007f3f00c0f800
+0x00007f3ec3933090:   00007f3e9c0c5928 ab83e745e67d9700
+0x00007f3ec39330a0:   00007f3e9c0c5940 0000000000000000
+0x00007f3ec39330b0:   0000000000000001 0000000000000003
+0x00007f3ec39330c0:   00007f3ed831ffcc 0000000000000000
+0x00007f3ec39330d0:   00007f3ec3933670 00007f3ed83131a5
+0x00007f3ec39330e0:   00007f3f00007c90 00007f3f06ded580
+0x00007f3ec39330f0:   00000000717ab58a 00007f3ed8312fec
+0x00007f3ec3933100:   00007f3ec3933130 00007f3f05c914a1
+0x00007f3ec3933110:   0000000000000000 00007f3ed8312fad
+0x00007f3ec3933120:   00007f3e9c0c58c0 00007f3f00722fa8
+0x00007f3ec3933130:   0000000000000000 00007f3f05e9f4c2
+0x00007f3ec3933140:   0000000000000060 0000000000000001
+0x00007f3ec3933150:   0000000000000000 0000000000000000
+0x00007f3ec3933160:   0000000000000000 0000000000000000
+0x00007f3ec3933170:   0000003100000004 0000006e0000005b
+0x00007f3ec3933180:   0000007c00000000 00007f3ec39331a0
+0x00007f3ec3933190:   00007f3f0000000e 00007f3ec3933820
+0x00007f3ec39331a0:   00007f3f00675200 00007f3f00c0f9d8
+0x00007f3ec39331b0:   00007f3f006751e0 00007f3ec3933820
+0x00007f3ec39331c0:   00007f3ec3933690 00007f3ec3933130 
+
+Instructions: (pc=0x00007f3ed80c0d31)
+0x00007f3ed80c0d11:   8b 7d 28 e8 f7 35 fe ff e9 bb fd ff ff 48 8b 7b
+0x00007f3ed80c0d21:   38 e8 f9 41 fe ff e9 f7 fe ff ff 0f 1f 40 00 53
+0x00007f3ed80c0d31:   48 8b 07 48 89 fb 48 8b b8 80 f0 01 00 e8 bd 48
+0x00007f3ed80c0d41:   fe ff 48 89 df e8 35 4b fe ff 5b c3 48 83 ea 01 
+
+Register to memory mapping:
+
+RAX=0x0000000000000000 is an unknown value
+RBX=0x0000000000000000 is an unknown value
+RCX=0x00007f3ec39330c0 is pointing into the stack for thread: 0x00007f3f00c0f800
+RDX=0x00007f3ec3933190 is pointing into the stack for thread: 0x00007f3f00c0f800
+RSP=0x00007f3ec3932fd0 is pointing into the stack for thread: 0x00007f3f00c0f800
+RBP=0x00007f3ec3932fe0 is pointing into the stack for thread: 0x00007f3f00c0f800
+RSI=0x00007f3e9c0c5918 is an unknown value
+RDI=0x0000000000000000 is an unknown value
+R8 =0x00007f3f00c0f800 is a thread
+R9 =0x00007f3e9c0c5940 is an unknown value
+R10=0x00007f3ec3932f30 is pointing into the stack for thread: 0x00007f3f00c0f800
+R11=0x00007f3ed80c0d30: World_WaitForQuit+0 in /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/libscsynth.so at 0x00007f3ed8086000
+R12=0x00007f3ec3932fe0 is pointing into the stack for thread: 0x00007f3f00c0f800
+R13=0x00007f3f00675270 is an unknown value
+R14=0x00007f3ec3933690 is pointing into the stack for thread: 0x00007f3f00c0f800
+R15=0x0000000000000008 is an unknown value
+
+
+Stack: [0x00007f3ec3834000,0x00007f3ec3935000],  sp=0x00007f3ec3932fd0,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libscsynth.so+0x3ad31]  World_WaitForQuit+0x1
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  overtone.sc.machinery.server.native.lib_eba13068_0445_405b_9258_919616b49f2c.World_WaitForQuit(Lcom/sun/jna/Pointer;)V+0
+j  overtone.sc.machinery.server.native$eval2744$fn__2745.invoke(Ljava/lang/Object;)Ljava/lang/Object;+6
+j  overtone.sc.machinery.server.native$scsynth_run.invoke(Ljava/lang/Object;)Ljava/lang/Object;+67
+j  overtone.sc.machinery.server.connection$internal_booter.invoke(Ljava/lang/Object;)Ljava/lang/Object;+331
+j  overtone.sc.machinery.server.connection$boot_internal_server$fn__2841.invoke()Ljava/lang/Object;+13
+j  clojure.lang.AFn.run()V+1
+j  java.lang.Thread.run()V+11
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x00007f3f00c0f800 JavaThread "Thread-5" daemon [_thread_in_native, id=8180, stack(0x00007f3ec3834000,0x00007f3ec3935000)]
+  0x00007f3f00be8000 JavaThread "Java Sound Event Dispatcher" daemon [_thread_blocked, id=8179, stack(0x00007f3ec3935000,0x00007f3ec3a36000)]
+  0x00007f3e74001000 JavaThread "pool-4-thread-10" [_thread_blocked, id=8178, stack(0x00007f3ed0475000,0x00007f3ed0576000)]
+  0x00007f3e84006800 JavaThread "pool-4-thread-9" [_thread_blocked, id=8177, stack(0x00007f3ed0576000,0x00007f3ed0677000)]
+  0x00007f3e80001000 JavaThread "pool-4-thread-8" [_thread_blocked, id=8176, stack(0x00007f3ed0677000,0x00007f3ed0778000)]
+  0x00007f3f00b5f000 JavaThread "pool-3-thread-10" [_thread_blocked, id=8175, stack(0x00007f3ed0778000,0x00007f3ed0879000)]
+  0x00007f3f00b5c000 JavaThread "pool-3-thread-9" [_thread_blocked, id=8174, stack(0x00007f3ed0879000,0x00007f3ed097a000)]
+  0x00007f3f00b5d800 JavaThread "pool-3-thread-8" [_thread_blocked, id=8173, stack(0x00007f3ed097a000,0x00007f3ed0a7b000)]
+  0x00007f3f00b5a800 JavaThread "pool-3-thread-7" [_thread_blocked, id=8172, stack(0x00007f3ed0a7b000,0x00007f3ed0b7c000)]
+  0x00007f3f00b3e800 JavaThread "pool-3-thread-6" [_thread_blocked, id=8171, stack(0x00007f3ed0b7c000,0x00007f3ed0c7d000)]
+  0x00007f3f00b49000 JavaThread "pool-3-thread-5" [_thread_blocked, id=8170, stack(0x00007f3ed0c7d000,0x00007f3ed0d7e000)]
+  0x00007f3f00b48800 JavaThread "pool-3-thread-4" [_thread_blocked, id=8169, stack(0x00007f3ed0d7e000,0x00007f3ed0e7f000)]
+  0x00007f3f00b57000 JavaThread "pool-3-thread-3" [_thread_blocked, id=8168, stack(0x00007f3ed0e7f000,0x00007f3ed0f80000)]
+  0x00007f3f00ada800 JavaThread "pool-3-thread-2" [_thread_blocked, id=8167, stack(0x00007f3ed0f80000,0x00007f3ed1081000)]
+  0x00007f3f00b37800 JavaThread "pool-3-thread-1" [_thread_blocked, id=8166, stack(0x00007f3ed1081000,0x00007f3ed1182000)]
+  0x00007f3e88002800 JavaThread "pool-4-thread-7" [_thread_blocked, id=8165, stack(0x00007f3ed1182000,0x00007f3ed1283000)]
+  0x00007f3e7c001000 JavaThread "pool-4-thread-6" [_thread_blocked, id=8164, stack(0x00007f3ed1283000,0x00007f3ed1384000)]
+  0x00007f3e84005000 JavaThread "pool-4-thread-5" [_thread_blocked, id=8163, stack(0x00007f3ed1384000,0x00007f3ed1485000)]
+  0x00007f3e88001000 JavaThread "pool-4-thread-4" [_thread_blocked, id=8162, stack(0x00007f3ed1485000,0x00007f3ed1586000)]
+  0x00007f3e84003000 JavaThread "pool-4-thread-3" [_thread_blocked, id=8161, stack(0x00007f3ed1586000,0x00007f3ed1687000)]
+  0x00007f3e84001000 JavaThread "pool-4-thread-2" [_thread_blocked, id=8160, stack(0x00007f3ed1687000,0x00007f3ed1788000)]
+  0x00007f3f00677800 JavaThread "pool-4-thread-1" [_thread_blocked, id=8159, stack(0x00007f3ed1788000,0x00007f3ed1889000)]
+  0x00007f3f005db000 JavaThread "clojure-agent-send-off-pool-0" [_thread_in_vm, id=8158, stack(0x00007f3ed8524000,0x00007f3ed8625000)]
+  0x00007f3f00464000 JavaThread "AWT-XAWT" daemon [_thread_in_native, id=8157, stack(0x00007f3ed8625000,0x00007f3ed8726000)]
+  0x00007f3f00431800 JavaThread "Java2D Disposer" daemon [_thread_blocked, id=8156, stack(0x00007f3ee00b1000,0x00007f3ee01b2000)]
+  0x00007f3f0011f000 JavaThread "Service Thread" daemon [_thread_blocked, id=8154, stack(0x00007f3ee96c1000,0x00007f3ee97c2000)]
+  0x00007f3f0011c800 JavaThread "C1 CompilerThread3" daemon [_thread_blocked, id=8153, stack(0x00007f3ee97c2000,0x00007f3ee98c3000)]
+  0x00007f3f0011a000 JavaThread "C2 CompilerThread2" daemon [_thread_blocked, id=8152, stack(0x00007f3ee98c3000,0x00007f3ee99c4000)]
+  0x00007f3f00118000 JavaThread "C2 CompilerThread1" daemon [_thread_blocked, id=8151, stack(0x00007f3ee99c4000,0x00007f3ee9ac5000)]
+  0x00007f3f00115800 JavaThread "C2 CompilerThread0" daemon [_thread_blocked, id=8150, stack(0x00007f3ee9ac5000,0x00007f3ee9bc6000)]
+  0x00007f3f00113000 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=8149, stack(0x00007f3ee9bc6000,0x00007f3ee9cc7000)]
+  0x00007f3f000bd000 JavaThread "Finalizer" daemon [_thread_blocked, id=8148, stack(0x00007f3ee9f90000,0x00007f3eea091000)]
+  0x00007f3f000bb000 JavaThread "Reference Handler" daemon [_thread_blocked, id=8147, stack(0x00007f3eea091000,0x00007f3eea192000)]
+  0x00007f3f0000c000 JavaThread "main" [_thread_blocked, id=8136, stack(0x00007f3f07435000,0x00007f3f07536000)]
+
+Other Threads:
+  0x00007f3f000b2800 VMThread [stack: 0x00007f3eea192000,0x00007f3eea293000] [id=8146]
+  0x00007f3f00129800 WatcherThread [stack: 0x00007f3ee95c0000,0x00007f3ee96c1000] [id=8155]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ PSYoungGen      total 661120K, used 351450K [0x00000007d6e00000, 0x0000000800000000, 0x0000000800000000)
+  eden space 649344K, 52% used [0x00000007d6e00000,0x00000007ebbb6a78,0x00000007fe820000)
+  from space 11776K, 82% used [0x00000007ff480000,0x00000007ffe00000,0x0000000800000000)
+  to   space 12224K, 0% used [0x00000007fe820000,0x00000007fe820000,0x00000007ff410000)
+ ParOldGen       total 84224K, used 14795K [0x0000000784a00000, 0x0000000789c40000, 0x00000007d6e00000)
+  object space 84224K, 17% used [0x0000000784a00000,0x0000000785872db0,0x0000000789c40000)
+ PSPermGen       total 32960K, used 32903K [0x000000077a400000, 0x000000077c430000, 0x0000000784a00000)
+  object space 32960K, 99% used [0x000000077a400000,0x000000077c421ed8,0x000000077c430000)
+
+Card table byte_map: [0x00007f3ef9bd1000,0x00007f3efa000000] byte_map_base: 0x00007f3ef5fff000
+
+Polling page: 0x00007f3f0755f000
+
+Code Cache  [0x00007f3efa000000, 0x00007f3efa650000, 0x00007f3f00000000)
+ total_blobs=2922 nmethods=2485 adapters=369 free_code_cache=91869Kb largest_free_block=94071360
+
+Compilation events (10 events):
+Event: 8.088 Thread 0x00007f3f0011c800 2505       1       java.util.LinkedHashMap::createEntry (52 bytes)
+Event: 8.089 Thread 0x00007f3f0011c800 nmethod 2505 0x00007f3efa648190 code [0x00007f3efa648300, 0x00007f3efa648630]
+Event: 8.098 Thread 0x00007f3f0011c800 2506       1       java.lang.Byte::<init> (10 bytes)
+Event: 8.099 Thread 0x00007f3f0011c800 nmethod 2506 0x00007f3efa648890 code [0x00007f3efa6489e0, 0x00007f3efa648b30]
+Event: 8.100 Thread 0x00007f3f0011c800 2507       1       java.lang.reflect.Field::getDeclaringClass (5 bytes)
+Event: 8.100 Thread 0x00007f3f0011c800 nmethod 2507 0x00007f3efa648b90 code [0x00007f3efa648ce0, 0x00007f3efa648e30]
+Event: 8.141 Thread 0x00007f3f0011c800 2508       1       clojure.lang.Numbers$BigIntOps::combine (8 bytes)
+Event: 8.141 Thread 0x00007f3f0011c800 nmethod 2508 0x00007f3efa648e90 code [0x00007f3efa649000, 0x00007f3efa649168]
+Event: 8.141 Thread 0x00007f3f0011c800 2509       1       clojure.lang.Numbers$BigIntOps::lt (12 bytes)
+Event: 8.141 Thread 0x00007f3f0011c800 nmethod 2509 0x00007f3efa6491d0 code [0x00007f3efa649340, 0x00007f3efa6494e8]
+
+GC Heap History (10 events):
+Event: 3.115 GC heap before
+{Heap before GC invocations=6 (full 0):
+ PSYoungGen      total 131456K, used 131424K [0x00000007d6e00000, 0x00000007e7420000, 0x0000000800000000)
+  eden space 126208K, 100% used [0x00000007d6e00000,0x00000007de940000,0x00000007de940000)
+  from space 5248K, 99% used [0x00000007de940000,0x00000007dee58060,0x00000007dee60000)
+  to   space 8000K, 0% used [0x00000007e6c50000,0x00000007e6c50000,0x00000007e7420000)
+ ParOldGen       total 84224K, used 3799K [0x0000000784a00000, 0x0000000789c40000, 0x00000007d6e00000)
+  object space 84224K, 4% used [0x0000000784a00000,0x0000000784db5d20,0x0000000789c40000)
+ PSPermGen       total 22016K, used 21939K [0x000000077a400000, 0x000000077b980000, 0x0000000784a00000)
+  object space 22016K, 99% used [0x000000077a400000,0x000000077b96cee0,0x000000077b980000)
+Event: 3.124 GC heap after
+Heap after GC invocations=6 (full 0):
+ PSYoungGen      total 260352K, used 6467K [0x00000007d6e00000, 0x00000007e7440000, 0x0000000800000000)
+  eden space 252352K, 0% used [0x00000007d6e00000,0x00000007d6e00000,0x00000007e6470000)
+  from space 8000K, 80% used [0x00000007e6c50000,0x00000007e72a0ff0,0x00000007e7420000)
+  to   space 8064K, 0% used [0x00000007e6470000,0x00000007e6470000,0x00000007e6c50000)
+ ParOldGen       total 84224K, used 3807K [0x0000000784a00000, 0x0000000789c40000, 0x00000007d6e00000)
+  object space 84224K, 4% used [0x0000000784a00000,0x0000000784db7d20,0x0000000789c40000)
+ PSPermGen       total 22016K, used 21939K [0x000000077a400000, 0x000000077b980000, 0x0000000784a00000)
+  object space 22016K, 99% used [0x000000077a400000,0x000000077b96cee0,0x000000077b980000)
+}
+Event: 4.410 GC heap before
+{Heap before GC invocations=7 (full 0):
+ PSYoungGen      total 260352K, used 258819K [0x00000007d6e00000, 0x00000007e7440000, 0x0000000800000000)
+  eden space 252352K, 100% used [0x00000007d6e00000,0x00000007e6470000,0x00000007e6470000)
+  from space 8000K, 80% used [0x00000007e6c50000,0x00000007e72a0ff0,0x00000007e7420000)
+  to   space 8064K, 0% used [0x00000007e6470000,0x00000007e6470000,0x00000007e6c50000)
+ ParOldGen       total 84224K, used 3807K [0x0000000784a00000, 0x0000000789c40000, 0x00000007d6e00000)
+  object space 84224K, 4% used [0x0000000784a00000,0x0000000784db7d20,0x0000000789c40000)
+ PSPermGen       total 24896K, used 24741K [0x000000077a400000, 0x000000077bc50000, 0x0000000784a00000)
+  object space 24896K, 99% used [0x000000077a400000,0x000000077bc29780,0x000000077bc50000)
+Event: 4.420 GC heap after
+Heap after GC invocations=7 (full 0):
+ PSYoungGen      total 260416K, used 8048K [0x00000007d6e00000, 0x00000007f6ea0000, 0x0000000800000000)
+  eden space 252352K, 0% used [0x00000007d6e00000,0x00000007d6e00000,0x00000007e6470000)
+  from space 8064K, 99% used [0x00000007e6470000,0x00000007e6c4c0d0,0x00000007e6c50000)
+  to   space 10112K, 0% used [0x00000007f64c0000,0x00000007f64c0000,0x00000007f6ea0000)
+ ParOldGen       total 84224K, used 6318K [0x0000000784a00000, 0x0000000789c40000, 0x00000007d6e00000)
+  object space 84224K, 7% used [0x0000000784a00000,0x000000078502b968,0x0000000789c40000)
+ PSPermGen       total 24896K, used 24741K [0x000000077a400000, 0x000000077bc50000, 0x0000000784a00000)
+  object space 24896K, 99% used [0x000000077a400000,0x000000077bc29780,0x000000077bc50000)
+}
+Event: 4.697 GC heap before
+{Heap before GC invocations=8 (full 0):
+ PSYoungGen      total 260416K, used 260400K [0x00000007d6e00000, 0x00000007f6ea0000, 0x0000000800000000)
+  eden space 252352K, 100% used [0x00000007d6e00000,0x00000007e6470000,0x00000007e6470000)
+  from space 8064K, 99% used [0x00000007e6470000,0x00000007e6c4c0d0,0x00000007e6c50000)
+  to   space 10112K, 0% used [0x00000007f64c0000,0x00000007f64c0000,0x00000007f6ea0000)
+ ParOldGen       total 84224K, used 6318K [0x0000000784a00000, 0x0000000789c40000, 0x00000007d6e00000)
+  object space 84224K, 7% used [0x0000000784a00000,0x000000078502b968,0x0000000789c40000)
+ PSPermGen       total 24896K, used 24826K [0x000000077a400000, 0x000000077bc50000, 0x0000000784a00000)
+  object space 24896K, 99% used [0x000000077a400000,0x000000077bc3e888,0x000000077bc50000)
+Event: 4.704 GC heap after
+Heap after GC invocations=8 (full 0):
+ PSYoungGen      total 514304K, used 6976K [0x00000007d6e00000, 0x00000007f6e20000, 0x0000000800000000)
+  eden space 504704K, 0% used [0x00000007d6e00000,0x00000007d6e00000,0x00000007f5ae0000)
+  from space 9600K, 72% used [0x00000007f64c0000,0x00000007f6b90348,0x00000007f6e20000)
+  to   space 9856K, 0% used [0x00000007f5ae0000,0x00000007f5ae0000,0x00000007f6480000)
+ ParOldGen       total 84224K, used 7950K [0x0000000784a00000, 0x0000000789c40000, 0x00000007d6e00000)
+  object space 84224K, 9% used [0x0000000784a00000,0x00000007851c3968,0x0000000789c40000)
+ PSPermGen       total 24896K, used 24826K [0x000000077a400000, 0x000000077bc50000, 0x0000000784a00000)
+  object space 24896K, 99% used [0x000000077a400000,0x000000077bc3e888,0x000000077bc50000)
+}
+Event: 5.422 GC heap before
+{Heap before GC invocations=9 (full 0):
+ PSYoungGen      total 514304K, used 511680K [0x00000007d6e00000, 0x00000007f6e20000, 0x0000000800000000)
+  eden space 504704K, 100% used [0x00000007d6e00000,0x00000007f5ae0000,0x00000007f5ae0000)
+  from space 9600K, 72% used [0x00000007f64c0000,0x00000007f6b90348,0x00000007f6e20000)
+  to   space 9856K, 0% used [0x00000007f5ae0000,0x00000007f5ae0000,0x00000007f6480000)
+ ParOldGen       total 84224K, used 7950K [0x0000000784a00000, 0x0000000789c40000, 0x00000007d6e00000)
+  object space 84224K, 9% used [0x0000000784a00000,0x00000007851c3968,0x0000000789c40000)
+ PSPermGen       total 25472K, used 25468K [0x000000077a400000, 0x000000077bce0000, 0x0000000784a00000)
+  object space 25472K, 99% used [0x000000077a400000,0x000000077bcdf2a8,0x000000077bce0000)
+Event: 5.433 GC heap after
+Heap after GC invocations=9 (full 0):
+ PSYoungGen      total 514560K, used 9851K [0x00000007d6e00000, 0x0000000800000000, 0x0000000800000000)
+  eden space 504704K, 0% used [0x00000007d6e00000,0x00000007d6e00000,0x00000007f5ae0000)
+  from space 9856K, 99% used [0x00000007f5ae0000,0x00000007f647ef70,0x00000007f6480000)
+  to   space 11776K, 0% used [0x00000007ff480000,0x00000007ff480000,0x0000000800000000)
+ ParOldGen       total 84224K, used 10236K [0x0000000784a00000, 0x0000000789c40000, 0x00000007d6e00000)
+  object space 84224K, 12% used [0x0000000784a00000,0x00000007853ff018,0x0000000789c40000)
+ PSPermGen       total 25472K, used 25468K [0x000000077a400000, 0x000000077bce0000, 0x0000000784a00000)
+  object space 25472K, 99% used [0x000000077a400000,0x000000077bcdf2a8,0x000000077bce0000)
+}
+Event: 6.793 GC heap before
+{Heap before GC invocations=10 (full 0):
+ PSYoungGen      total 514560K, used 514555K [0x00000007d6e00000, 0x0000000800000000, 0x0000000800000000)
+  eden space 504704K, 100% used [0x00000007d6e00000,0x00000007f5ae0000,0x00000007f5ae0000)
+  from space 9856K, 99% used [0x00000007f5ae0000,0x00000007f647ef70,0x00000007f6480000)
+  to   space 11776K, 0% used [0x00000007ff480000,0x00000007ff480000,0x0000000800000000)
+ ParOldGen       total 84224K, used 10236K [0x0000000784a00000, 0x0000000789c40000, 0x00000007d6e00000)
+  object space 84224K, 12% used [0x0000000784a00000,0x00000007853ff018,0x0000000789c40000)
+ PSPermGen       total 29120K, used 28935K [0x000000077a400000, 0x000000077c070000, 0x0000000784a00000)
+  object space 29120K, 99% used [0x000000077a400000,0x000000077c041dc8,0x000000077c070000)
+Event: 6.809 GC heap after
+Heap after GC invocations=10 (full 0):
+ PSYoungGen      total 661120K, used 9728K [0x00000007d6e00000, 0x0000000800000000, 0x0000000800000000)
+  eden space 649344K, 0% used [0x00000007d6e00000,0x00000007d6e00000,0x00000007fe820000)
+  from space 11776K, 82% used [0x00000007ff480000,0x00000007ffe00000,0x0000000800000000)
+  to   space 12224K, 0% used [0x00000007fe820000,0x00000007fe820000,0x00000007ff410000)
+ ParOldGen       total 84224K, used 14795K [0x0000000784a00000, 0x0000000789c40000, 0x00000007d6e00000)
+  object space 84224K, 17% used [0x0000000784a00000,0x0000000785872db0,0x0000000789c40000)
+ PSPermGen       total 29120K, used 28935K [0x000000077a400000, 0x000000077c070000, 0x0000000784a00000)
+  object space 29120K, 99% used [0x000000077a400000,0x000000077c041dc8,0x000000077c070000)
+}
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 8.080 Thread 0x00007f3f0000c000 Threw 0x00000007eae24188 at /build/buildd/openjdk-7-7u21-2.3.9/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 8.080 Thread 0x00007f3f0000c000 Threw 0x00000007eae24a48 at /build/buildd/openjdk-7-7u21-2.3.9/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 8.083 Thread 0x00007f3f00c0f800 Threw 0x00000007eb99e560 at /build/buildd/openjdk-7-7u21-2.3.9/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 8.084 Thread 0x00007f3f00c0f800 Threw 0x00000007eb9a5930 at /build/buildd/openjdk-7-7u21-2.3.9/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 8.088 Thread 0x00007f3f00c0f800 Threw 0x00000007eb9ac3c8 at /build/buildd/openjdk-7-7u21-2.3.9/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 8.088 Thread 0x00007f3f00c0f800 Threw 0x00000007eb9b12e0 at /build/buildd/openjdk-7-7u21-2.3.9/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 8.099 Thread 0x00007f3f00c0f800 Threw 0x00000007eba0fe80 at /build/buildd/openjdk-7-7u21-2.3.9/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 8.099 Thread 0x00007f3f00c0f800 Threw 0x00000007eba19850 at /build/buildd/openjdk-7-7u21-2.3.9/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 8.099 Thread 0x00007f3f00c0f800 Threw 0x00000007eba1a750 at /build/buildd/openjdk-7-7u21-2.3.9/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1166
+Event: 8.099 Thread 0x00007f3f00c0f800 Threw 0x00000007eba20c40 at /build/buildd/openjdk-7-7u21-2.3.9/build/openjdk/hotspot/src/share/vm/prims/jvm.cpp:1166
+
+Events (10 events):
+Event: 8.097 loading class 0x00007f3f00035fb0
+Event: 8.098 loading class 0x00007f3f00035fb0 done
+Event: 8.099 loading class 0x00007f3f00669a90
+Event: 8.099 loading class 0x00007f3f00669a90 done
+Event: 8.099 loading class 0x00007f3f006352d0
+Event: 8.099 loading class 0x00007f3f006352d0 done
+Event: 8.099 loading class 0x00007f3f005f7240
+Event: 8.099 loading class 0x00007f3f005f7240 done
+Event: 8.142 loading class 0x00007f3f0079d7d0
+Event: 8.142 loading class 0x00007f3f0079d7d0 done
+
+
+Dynamic libraries:
+00400000-00401000 r-xp 00000000 08:03 1971839                            /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+00600000-00601000 r--p 00000000 08:03 1971839                            /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+00601000-00602000 rw-p 00001000 08:03 1971839                            /usr/lib/jvm/java-7-openjdk-amd64/jre/bin/java
+008b5000-008d6000 rw-p 00000000 00:00 0                                  [heap]
+77a400000-77c430000 rw-p 00000000 00:00 0 
+77c430000-784a00000 rw-p 00000000 00:00 0 
+784a00000-789c40000 rw-p 00000000 00:00 0 
+789c40000-7d6e00000 rw-p 00000000 00:00 0 
+7d6e00000-800000000 rw-p 00000000 00:00 0 
+7f3e08000000-7f3e08021000 rw-p 00000000 00:00 0 
+7f3e08021000-7f3e0c000000 ---p 00000000 00:00 0 
+7f3e0ffff000-7f3e20000000 rw-p 00000000 00:00 0 
+7f3e20000000-7f3e20022000 rw-p 00000000 00:00 0 
+7f3e20022000-7f3e24000000 ---p 00000000 00:00 0 
+7f3e271a3000-7f3e271a4000 ---p 00000000 00:00 0 
+7f3e271a4000-7f3e279a4000 rw-p 00000000 00:00 0                          [stack:8184]
+7f3e279a4000-7f3e279a6000 r-xp 00000000 08:03 15207858                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BatPVUgens.so
+7f3e279a6000-7f3e27ba5000 ---p 00002000 08:03 15207858                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BatPVUgens.so
+7f3e27ba5000-7f3e27ba6000 r--p 00001000 08:03 15207858                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BatPVUgens.so
+7f3e27ba6000-7f3e27ba7000 rw-p 00002000 08:03 15207858                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BatPVUgens.so
+7f3e27ba7000-7f3e27bb3000 rw-p 00000000 00:00 0 
+7f3e27bb3000-7f3e27bbf000 r-xp 00000000 08:03 15208476                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/FFT_UGens.so
+7f3e27bbf000-7f3e27dbf000 ---p 0000c000 08:03 15208476                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/FFT_UGens.so
+7f3e27dbf000-7f3e27dc0000 r--p 0000c000 08:03 15208476                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/FFT_UGens.so
+7f3e27dc0000-7f3e27dc1000 rw-p 0000d000 08:03 15208476                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/FFT_UGens.so
+7f3e27dc1000-7f3e27df1000 rw-p 00000000 00:00 0 
+7f3e27df1000-7f3e27dff000 r-xp 00000000 08:03 15208353                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/SLUGens.so
+7f3e27dff000-7f3e27ffe000 ---p 0000e000 08:03 15208353                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/SLUGens.so
+7f3e27ffe000-7f3e27fff000 r--p 0000d000 08:03 15208353                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/SLUGens.so
+7f3e27fff000-7f3e28000000 rw-p 0000e000 08:03 15208353                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/SLUGens.so
+7f3e28000000-7f3e28021000 rw-p 00000000 00:00 0 
+7f3e28021000-7f3e2c000000 ---p 00000000 00:00 0 
+7f3e2c18b000-7f3e2c18f000 r-xp 00000000 08:03 15207857                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/AY_UGen.so
+7f3e2c18f000-7f3e2c38e000 ---p 00004000 08:03 15207857                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/AY_UGen.so
+7f3e2c38e000-7f3e2c38f000 r--p 00003000 08:03 15207857                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/AY_UGen.so
+7f3e2c38f000-7f3e2c390000 rw-p 00004000 08:03 15207857                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/AY_UGen.so
+7f3e2c390000-7f3e2c392000 rw-p 00000000 00:00 0 
+7f3e2c392000-7f3e2c3ad000 r-xp 00000000 08:03 15207856                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/AtkUGens.so
+7f3e2c3ad000-7f3e2c5ad000 ---p 0001b000 08:03 15207856                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/AtkUGens.so
+7f3e2c5ad000-7f3e2c5ae000 r--p 0001b000 08:03 15207856                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/AtkUGens.so
+7f3e2c5ae000-7f3e2c5af000 rw-p 0001c000 08:03 15207856                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/AtkUGens.so
+7f3e2c5af000-7f3e2c5b3000 r-xp 00000000 08:03 15207859                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BatUGens.so
+7f3e2c5b3000-7f3e2c7b2000 ---p 00004000 08:03 15207859                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BatUGens.so
+7f3e2c7b2000-7f3e2c7b3000 r--p 00003000 08:03 15207859                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BatUGens.so
+7f3e2c7b3000-7f3e2c7b4000 rw-p 00004000 08:03 15207859                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BatUGens.so
+7f3e2c7b4000-7f3e2c7b7000 r-xp 00000000 08:03 15208340                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDFilterUGens.so
+7f3e2c7b7000-7f3e2c9b6000 ---p 00003000 08:03 15208340                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDFilterUGens.so
+7f3e2c9b6000-7f3e2c9b7000 r--p 00002000 08:03 15208340                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDFilterUGens.so
+7f3e2c9b7000-7f3e2c9b8000 rw-p 00003000 08:03 15208340                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDFilterUGens.so
+7f3e2c9b8000-7f3e2c9c0000 r-xp 00000000 08:03 15208358                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/VBAP.so
+7f3e2c9c0000-7f3e2cbbf000 ---p 00008000 08:03 15208358                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/VBAP.so
+7f3e2cbbf000-7f3e2cbc0000 r--p 00007000 08:03 15208358                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/VBAP.so
+7f3e2cbc0000-7f3e2cbc1000 rw-p 00008000 08:03 15208358                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/VBAP.so
+7f3e2cbc1000-7f3e2cbd3000 r-xp 00000000 08:03 15208482                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/LFUGens.so
+7f3e2cbd3000-7f3e2cdd3000 ---p 00012000 08:03 15208482                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/LFUGens.so
+7f3e2cdd3000-7f3e2cdd4000 r--p 00012000 08:03 15208482                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/LFUGens.so
+7f3e2cdd4000-7f3e2cdd5000 rw-p 00013000 08:03 15208482                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/LFUGens.so
+7f3e2cdd5000-7f3e2cdf1000 r-xp 00000000 08:03 15208477                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/FilterUGens.so
+7f3e2cdf1000-7f3e2cff0000 ---p 0001c000 08:03 15208477                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/FilterUGens.so
+7f3e2cff0000-7f3e2cff1000 r--p 0001b000 08:03 15208477                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/FilterUGens.so
+7f3e2cff1000-7f3e2cff2000 rw-p 0001c000 08:03 15208477                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/FilterUGens.so
+7f3e2cff2000-7f3e2cff7000 r-xp 00000000 08:03 15207940                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobFFT.so
+7f3e2cff7000-7f3e2d1f6000 ---p 00005000 08:03 15207940                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobFFT.so
+7f3e2d1f6000-7f3e2d1f7000 r--p 00004000 08:03 15207940                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobFFT.so
+7f3e2d1f7000-7f3e2d1f8000 rw-p 00005000 08:03 15207940                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobFFT.so
+7f3e2d1f8000-7f3e2d204000 rw-p 00000000 00:00 0 
+7f3e2d204000-7f3e2d21c000 r-xp 00000000 08:03 15208479                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/GrainUGens.so
+7f3e2d21c000-7f3e2d41b000 ---p 00018000 08:03 15208479                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/GrainUGens.so
+7f3e2d41b000-7f3e2d41c000 r--p 00017000 08:03 15208479                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/GrainUGens.so
+7f3e2d41c000-7f3e2d41d000 rw-p 00018000 08:03 15208479                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/GrainUGens.so
+7f3e2d41d000-7f3e2d423000 r-xp 00000000 08:03 15208492                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/ReverbUGens.so
+7f3e2d423000-7f3e2d622000 ---p 00006000 08:03 15208492                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/ReverbUGens.so
+7f3e2d622000-7f3e2d623000 r--p 00005000 08:03 15208492                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/ReverbUGens.so
+7f3e2d623000-7f3e2d624000 rw-p 00006000 08:03 15208492                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/ReverbUGens.so
+7f3e2d624000-7f3e2d629000 r-xp 00000000 08:03 15208326                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/Concat.so
+7f3e2d629000-7f3e2d828000 ---p 00005000 08:03 15208326                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/Concat.so
+7f3e2d828000-7f3e2d829000 r--p 00004000 08:03 15208326                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/Concat.so
+7f3e2d829000-7f3e2d82a000 rw-p 00005000 08:03 15208326                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/Concat.so
+7f3e2d82a000-7f3e2d82d000 r-xp 00000000 08:03 15208478                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/GendynUGens.so
+7f3e2d82d000-7f3e2da2c000 ---p 00003000 08:03 15208478                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/GendynUGens.so
+7f3e2da2c000-7f3e2da2d000 r--p 00002000 08:03 15208478                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/GendynUGens.so
+7f3e2da2d000-7f3e2da2e000 rw-p 00003000 08:03 15208478                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/GendynUGens.so
+7f3e2da2e000-7f3e2da2f000 ---p 00000000 00:00 0 
+7f3e2da2f000-7f3e2e22f000 rw-p 00000000 00:00 0                          [stack:8183]
+7f3e2e22f000-7f3e2e232000 r-xp 00000000 08:03 15208474                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DiskIO_UGens.so
+7f3e2e232000-7f3e2e432000 ---p 00003000 08:03 15208474                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DiskIO_UGens.so
+7f3e2e432000-7f3e2e433000 r--p 00003000 08:03 15208474                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DiskIO_UGens.so
+7f3e2e433000-7f3e2e434000 rw-p 00004000 08:03 15208474                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DiskIO_UGens.so
+7f3e2e434000-7f3e2e435000 rw-p 00000000 00:00 0 
+7f3e2e435000-7f3e2e436000 ---p 00000000 00:00 0 
+7f3e2e436000-7f3e2ec36000 rw-p 00000000 00:00 0                          [stack:8182]
+7f3e2ec36000-7f3e2ec37000 r-xp 00000000 08:03 15208481                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/KeyboardUGens.so
+7f3e2ec37000-7f3e2ee37000 ---p 00001000 08:03 15208481                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/KeyboardUGens.so
+7f3e2ee37000-7f3e2ee38000 r--p 00001000 08:03 15208481                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/KeyboardUGens.so
+7f3e2ee38000-7f3e2ee39000 rw-p 00002000 08:03 15208481                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/KeyboardUGens.so
+7f3e2ee39000-7f3e2ee3b000 r-xp 00000000 08:03 15208338                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDDistortionUGens.so
+7f3e2ee3b000-7f3e2f03a000 ---p 00002000 08:03 15208338                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDDistortionUGens.so
+7f3e2f03a000-7f3e2f03b000 r--p 00001000 08:03 15208338                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDDistortionUGens.so
+7f3e2f03b000-7f3e2f03c000 rw-p 00002000 08:03 15208338                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDDistortionUGens.so
+7f3e2f03c000-7f3e2f03e000 r-xp 00000000 08:03 15208341                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDGetenvUGen.so
+7f3e2f03e000-7f3e2f23d000 ---p 00002000 08:03 15208341                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDGetenvUGen.so
+7f3e2f23d000-7f3e2f23e000 r--p 00001000 08:03 15208341                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDGetenvUGen.so
+7f3e2f23e000-7f3e2f23f000 rw-p 00002000 08:03 15208341                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDGetenvUGen.so
+7f3e2f23f000-7f3e2f246000 r-xp 00000000 08:03 15207928                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BetablockerUGens.so
+7f3e2f246000-7f3e2f445000 ---p 00007000 08:03 15207928                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BetablockerUGens.so
+7f3e2f445000-7f3e2f446000 r--p 00006000 08:03 15207928                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BetablockerUGens.so
+7f3e2f446000-7f3e2f447000 rw-p 00007000 08:03 15207928                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BetablockerUGens.so
+7f3e2f447000-7f3e2f44a000 r-xp 00000000 08:03 15208327                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DistortionUGens.so
+7f3e2f44a000-7f3e2f649000 ---p 00003000 08:03 15208327                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DistortionUGens.so
+7f3e2f649000-7f3e2f64a000 r--p 00002000 08:03 15208327                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DistortionUGens.so
+7f3e2f64a000-7f3e2f64b000 rw-p 00003000 08:03 15208327                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DistortionUGens.so
+7f3e2f64b000-7f3e2f653000 r-xp 00000000 08:03 15208489                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/PanUGens.so
+7f3e2f653000-7f3e2f852000 ---p 00008000 08:03 15208489                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/PanUGens.so
+7f3e2f852000-7f3e2f853000 r--p 00007000 08:03 15208489                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/PanUGens.so
+7f3e2f853000-7f3e2f854000 rw-p 00008000 08:03 15208489                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/PanUGens.so
+7f3e2f854000-7f3e2f855000 ---p 00000000 00:00 0 
+7f3e2f855000-7f3e30055000 rw-p 00000000 00:00 0                          [stack:8181]
+7f3e30055000-7f3e30058000 r-xp 00000000 08:03 15208485                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MouseUGens.so
+7f3e30058000-7f3e30257000 ---p 00003000 08:03 15208485                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MouseUGens.so
+7f3e30257000-7f3e30258000 r--p 00002000 08:03 15208485                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MouseUGens.so
+7f3e30258000-7f3e30259000 rw-p 00003000 08:03 15208485                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MouseUGens.so
+7f3e30259000-7f3e3025c000 r-xp 00000000 08:03 15208355                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/SummerUGens.so
+7f3e3025c000-7f3e3045c000 ---p 00003000 08:03 15208355                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/SummerUGens.so
+7f3e3045c000-7f3e3045d000 r--p 00003000 08:03 15208355                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/SummerUGens.so
+7f3e3045d000-7f3e3045e000 rw-p 00004000 08:03 15208355                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/SummerUGens.so
+7f3e3045e000-7f3e3046a000 r-xp 00000000 08:03 15208350                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/PitchDetection.so
+7f3e3046a000-7f3e30669000 ---p 0000c000 08:03 15208350                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/PitchDetection.so
+7f3e30669000-7f3e3066a000 r--p 0000b000 08:03 15208350                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/PitchDetection.so
+7f3e3066a000-7f3e3066b000 rw-p 0000c000 08:03 15208350                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/PitchDetection.so
+7f3e3066b000-7f3e30677000 r-xp 00000000 08:03 15208494                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/TriggerUGens.so
+7f3e30677000-7f3e30876000 ---p 0000c000 08:03 15208494                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/TriggerUGens.so
+7f3e30876000-7f3e30877000 r--p 0000b000 08:03 15208494                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/TriggerUGens.so
+7f3e30877000-7f3e30878000 rw-p 0000c000 08:03 15208494                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/TriggerUGens.so
+7f3e30878000-7f3e3087b000 r-xp 00000000 08:03 15208347                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MdaUGens.so
+7f3e3087b000-7f3e30a7a000 ---p 00003000 08:03 15208347                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MdaUGens.so
+7f3e30a7a000-7f3e30a7b000 r--p 00002000 08:03 15208347                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MdaUGens.so
+7f3e30a7b000-7f3e30b9a000 rw-p 00003000 08:03 15208347                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MdaUGens.so
+7f3e30b9a000-7f3e30bb0000 r-xp 00000000 08:03 15208318                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobFilt.so
+7f3e30bb0000-7f3e30daf000 ---p 00016000 08:03 15208318                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobFilt.so
+7f3e30daf000-7f3e30db0000 r--p 00015000 08:03 15208318                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobFilt.so
+7f3e30db0000-7f3e30db1000 rw-p 00016000 08:03 15208318                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobFilt.so
+7f3e30db1000-7f3e30dc2000 r-xp 00000000 08:03 15208488                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/OscUGens.so
+7f3e30dc2000-7f3e30fc1000 ---p 00011000 08:03 15208488                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/OscUGens.so
+7f3e30fc1000-7f3e30fc2000 r--p 00010000 08:03 15208488                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/OscUGens.so
+7f3e30fc2000-7f3e30fc3000 rw-p 00011000 08:03 15208488                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/OscUGens.so
+7f3e30fc3000-7f3e30fc6000 r-xp 00000000 08:03 15208345                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDTreeUGens.so
+7f3e30fc6000-7f3e311c5000 ---p 00003000 08:03 15208345                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDTreeUGens.so
+7f3e311c5000-7f3e311c6000 r--p 00002000 08:03 15208345                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDTreeUGens.so
+7f3e311c6000-7f3e311c7000 rw-p 00003000 08:03 15208345                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDTreeUGens.so
+7f3e311c7000-7f3e311cd000 r-xp 00000000 08:03 15208486                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MulAddUGens.so
+7f3e311cd000-7f3e313cc000 ---p 00006000 08:03 15208486                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MulAddUGens.so
+7f3e313cc000-7f3e313cd000 r--p 00005000 08:03 15208486                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MulAddUGens.so
+7f3e313cd000-7f3e313ce000 rw-p 00006000 08:03 15208486                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MulAddUGens.so
+7f3e313ce000-7f3e313d3000 r-xp 00000000 08:03 15208337                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDChaosUGens.so
+7f3e313d3000-7f3e315d2000 ---p 00005000 08:03 15208337                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDChaosUGens.so
+7f3e315d2000-7f3e315d3000 r--p 00004000 08:03 15208337                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDChaosUGens.so
+7f3e315d3000-7f3e315d4000 rw-p 00005000 08:03 15208337                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDChaosUGens.so
+7f3e315d4000-7f3e315da000 r-xp 00000000 08:03 15207860                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BBCut2UGens.so
+7f3e315da000-7f3e317d9000 ---p 00006000 08:03 15207860                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BBCut2UGens.so
+7f3e317d9000-7f3e317da000 r--p 00005000 08:03 15207860                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BBCut2UGens.so
+7f3e317da000-7f3e317dc000 rw-p 00006000 08:03 15207860                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BBCut2UGens.so
+7f3e317dc000-7f3e317ef000 r-xp 00000000 08:03 15208495                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/UnaryOpUGens.so
+7f3e317ef000-7f3e319ef000 ---p 00013000 08:03 15208495                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/UnaryOpUGens.so
+7f3e319ef000-7f3e319f0000 r--p 00013000 08:03 15208495                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/UnaryOpUGens.so
+7f3e319f0000-7f3e319f1000 rw-p 00014000 08:03 15208495                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/UnaryOpUGens.so
+7f3e319f1000-7f3e319f6000 r-xp 00000000 08:03 15208323                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobGrain.so
+7f3e319f6000-7f3e31bf6000 ---p 00005000 08:03 15208323                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobGrain.so
+7f3e31bf6000-7f3e31bf7000 r--p 00005000 08:03 15208323                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobGrain.so
+7f3e31bf7000-7f3e31bf8000 rw-p 00006000 08:03 15208323                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobGrain.so
+7f3e31bf8000-7f3e31c00000 r-xp 00000000 08:03 15208352                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/RMEQSuite.so
+7f3e31c00000-7f3e31dff000 ---p 00008000 08:03 15208352                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/RMEQSuite.so
+7f3e31dff000-7f3e31e00000 r--p 00007000 08:03 15208352                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/RMEQSuite.so
+7f3e31e00000-7f3e31e01000 rw-p 00008000 08:03 15208352                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/RMEQSuite.so
+7f3e31e01000-7f3e31e03000 r-xp 00000000 08:03 15208496                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/UnpackFFTUGens.so
+7f3e31e03000-7f3e32002000 ---p 00002000 08:03 15208496                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/UnpackFFTUGens.so
+7f3e32002000-7f3e32003000 r--p 00001000 08:03 15208496                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/UnpackFFTUGens.so
+7f3e32003000-7f3e32004000 rw-p 00002000 08:03 15208496                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/UnpackFFTUGens.so
+7f3e32004000-7f3e32010000 rw-p 00000000 00:00 0 
+7f3e32010000-7f3e3204a000 r-xp 00000000 08:03 15208330                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/JoshGrainUGens.so
+7f3e3204a000-7f3e32249000 ---p 0003a000 08:03 15208330                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/JoshGrainUGens.so
+7f3e32249000-7f3e3224a000 r--p 00039000 08:03 15208330                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/JoshGrainUGens.so
+7f3e3224a000-7f3e3224b000 rw-p 0003a000 08:03 15208330                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/JoshGrainUGens.so
+7f3e3224b000-7f3e3224d000 r-xp 00000000 08:03 15208333                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/LadspaUGen.so
+7f3e3224d000-7f3e3244d000 ---p 00002000 08:03 15208333                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/LadspaUGen.so
+7f3e3244d000-7f3e3244e000 r--p 00002000 08:03 15208333                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/LadspaUGen.so
+7f3e3244e000-7f3e3244f000 rw-p 00003000 08:03 15208333                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/LadspaUGen.so
+7f3e3244f000-7f3e32451000 r-xp 00000000 08:03 15208490                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/PhysicalModelingUGens.so
+7f3e32451000-7f3e32650000 ---p 00002000 08:03 15208490                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/PhysicalModelingUGens.so
+7f3e32650000-7f3e32651000 r--p 00001000 08:03 15208490                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/PhysicalModelingUGens.so
+7f3e32651000-7f3e32652000 rw-p 00002000 08:03 15208490                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/PhysicalModelingUGens.so
+7f3e32652000-7f3e32658000 r-xp 00000000 08:03 15208480                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/IOUGens.so
+7f3e32658000-7f3e32858000 ---p 00006000 08:03 15208480                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/IOUGens.so
+7f3e32858000-7f3e32859000 r--p 00006000 08:03 15208480                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/IOUGens.so
+7f3e32859000-7f3e3285a000 rw-p 00007000 08:03 15208480                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/IOUGens.so
+7f3e3285a000-7f3e32865000 r-xp 00000000 08:03 15207939                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobChaos.so
+7f3e32865000-7f3e32a64000 ---p 0000b000 08:03 15207939                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobChaos.so
+7f3e32a64000-7f3e32a65000 r--p 0000a000 08:03 15207939                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobChaos.so
+7f3e32a65000-7f3e32a66000 rw-p 0000b000 08:03 15207939                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobChaos.so
+7f3e32a66000-7f3e32a69000 r-xp 00000000 08:03 15208336                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDCepstrumUGens.so
+7f3e32a69000-7f3e32c68000 ---p 00003000 08:03 15208336                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDCepstrumUGens.so
+7f3e32c68000-7f3e32c69000 r--p 00002000 08:03 15208336                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDCepstrumUGens.so
+7f3e32c69000-7f3e32c6a000 rw-p 00003000 08:03 15208336                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDCepstrumUGens.so
+7f3e32c6a000-7f3e32c76000 rw-p 00000000 00:00 0 
+7f3e32c76000-7f3e32c88000 r-xp 00000000 08:03 15207861                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BerlachUGens.so
+7f3e32c88000-7f3e32e87000 ---p 00012000 08:03 15207861                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BerlachUGens.so
+7f3e32e87000-7f3e32e88000 r--p 00011000 08:03 15207861                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BerlachUGens.so
+7f3e32e88000-7f3e32e89000 rw-p 00012000 08:03 15207861                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BerlachUGens.so
+7f3e32e89000-7f3e32eb7000 r-xp 00000000 08:03 15208472                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DelayUGens.so
+7f3e32eb7000-7f3e330b7000 ---p 0002e000 08:03 15208472                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DelayUGens.so
+7f3e330b7000-7f3e330b8000 r--p 0002e000 08:03 15208472                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DelayUGens.so
+7f3e330b8000-7f3e330b9000 rw-p 0002f000 08:03 15208472                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DelayUGens.so
+7f3e330b9000-7f3e330bb000 r-xp 00000000 08:03 15208346                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDTriggeredStatsUgens.so
+7f3e330bb000-7f3e332ba000 ---p 00002000 08:03 15208346                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDTriggeredStatsUgens.so
+7f3e332ba000-7f3e332bb000 r--p 00001000 08:03 15208346                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDTriggeredStatsUgens.so
+7f3e332bb000-7f3e332bc000 rw-p 00002000 08:03 15208346                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDTriggeredStatsUgens.so
+7f3e332bc000-7f3e332ee000 r-xp 00000000 08:03 15208470                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BinaryOpUGens.so
+7f3e332ee000-7f3e334ee000 ---p 00032000 08:03 15208470                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BinaryOpUGens.so
+7f3e334ee000-7f3e334ef000 r--p 00032000 08:03 15208470                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BinaryOpUGens.so
+7f3e334ef000-7f3e334f0000 rw-p 00033000 08:03 15208470                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BinaryOpUGens.so
+7f3e334f0000-7f3e335b2000 r-xp 00000000 08:03 15208354                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/StkUGens.so
+7f3e335b2000-7f3e337b1000 ---p 000c2000 08:03 15208354                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/StkUGens.so
+7f3e337b1000-7f3e337b5000 r--p 000c1000 08:03 15208354                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/StkUGens.so
+7f3e337b5000-7f3e337ba000 rw-p 000c5000 08:03 15208354                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/StkUGens.so
+7f3e337ba000-7f3e337c0000 r-xp 00000000 08:03 15208491                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/PV_ThirdParty.so
+7f3e337c0000-7f3e339c0000 ---p 00006000 08:03 15208491                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/PV_ThirdParty.so
+7f3e339c0000-7f3e339c1000 r--p 00006000 08:03 15208491                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/PV_ThirdParty.so
+7f3e339c1000-7f3e339c2000 rw-p 00007000 08:03 15208491                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/PV_ThirdParty.so
+7f3e339c2000-7f3e339f2000 rw-p 00000000 00:00 0 
+7f3e339f2000-7f3e339f5000 r-xp 00000000 08:03 15208348                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MembraneUGens.so
+7f3e339f5000-7f3e33bf4000 ---p 00003000 08:03 15208348                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MembraneUGens.so
+7f3e33bf4000-7f3e33bf5000 r--p 00002000 08:03 15208348                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MembraneUGens.so
+7f3e33bf5000-7f3e33bf6000 rw-p 00003000 08:03 15208348                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MembraneUGens.so
+7f3e33bf6000-7f3e33bfa000 r-xp 00000000 08:03 15208344                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDSOMUGens.so
+7f3e33bfa000-7f3e33df9000 ---p 00004000 08:03 15208344                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDSOMUGens.so
+7f3e33df9000-7f3e33dfa000 r--p 00003000 08:03 15208344                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDSOMUGens.so
+7f3e33dfa000-7f3e33dfb000 rw-p 00004000 08:03 15208344                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDSOMUGens.so
+7f3e33dfb000-7f3e33dff000 r-xp 00000000 08:03 15208356                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/TagSystemUgens.so
+7f3e33dff000-7f3e33ffe000 ---p 00004000 08:03 15208356                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/TagSystemUgens.so
+7f3e33ffe000-7f3e33fff000 r--p 00003000 08:03 15208356                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/TagSystemUgens.so
+7f3e33fff000-7f3e34000000 rw-p 00004000 08:03 15208356                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/TagSystemUgens.so
+7f3e34000000-7f3e34021000 rw-p 00000000 00:00 0 
+7f3e34021000-7f3e38000000 ---p 00000000 00:00 0 
+7f3e38000000-7f3e380ef000 rw-p 00000000 00:00 0 
+7f3e380ef000-7f3e3c000000 ---p 00000000 00:00 0 
+7f3e3c000000-7f3e3c021000 rw-p 00000000 00:00 0 
+7f3e3c021000-7f3e40000000 ---p 00000000 00:00 0 
+7f3e40000000-7f3e40021000 rw-p 00000000 00:00 0 
+7f3e40021000-7f3e44000000 ---p 00000000 00:00 0 
+7f3e44000000-7f3e44021000 rw-p 00000000 00:00 0 
+7f3e44021000-7f3e48000000 ---p 00000000 00:00 0 
+7f3e48000000-7f3e48021000 rw-p 00000000 00:00 0 
+7f3e48021000-7f3e4c000000 ---p 00000000 00:00 0 
+7f3e4c000000-7f3e4c021000 rw-p 00000000 00:00 0 
+7f3e4c021000-7f3e50000000 ---p 00000000 00:00 0 
+7f3e50000000-7f3e50021000 rw-p 00000000 00:00 0 
+7f3e50021000-7f3e54000000 ---p 00000000 00:00 0 
+7f3e54000000-7f3e54021000 rw-p 00000000 00:00 0 
+7f3e54021000-7f3e58000000 ---p 00000000 00:00 0 
+7f3e58000000-7f3e58021000 rw-p 00000000 00:00 0 
+7f3e58021000-7f3e5c000000 ---p 00000000 00:00 0 
+7f3e5c000000-7f3e5c021000 rw-p 00000000 00:00 0 
+7f3e5c021000-7f3e60000000 ---p 00000000 00:00 0 
+7f3e60000000-7f3e60021000 rw-p 00000000 00:00 0 
+7f3e60021000-7f3e64000000 ---p 00000000 00:00 0 
+7f3e64000000-7f3e64021000 rw-p 00000000 00:00 0 
+7f3e64021000-7f3e68000000 ---p 00000000 00:00 0 
+7f3e68000000-7f3e68021000 rw-p 00000000 00:00 0 
+7f3e68021000-7f3e6c000000 ---p 00000000 00:00 0 
+7f3e6c000000-7f3e6c021000 rw-p 00000000 00:00 0 
+7f3e6c021000-7f3e70000000 ---p 00000000 00:00 0 
+7f3e70000000-7f3e70021000 rw-p 00000000 00:00 0 
+7f3e70021000-7f3e74000000 ---p 00000000 00:00 0 
+7f3e74000000-7f3e74021000 rw-p 00000000 00:00 0 
+7f3e74021000-7f3e78000000 ---p 00000000 00:00 0 
+7f3e78000000-7f3e78021000 rw-p 00000000 00:00 0 
+7f3e78021000-7f3e7c000000 ---p 00000000 00:00 0 
+7f3e7c000000-7f3e7c021000 rw-p 00000000 00:00 0 
+7f3e7c021000-7f3e80000000 ---p 00000000 00:00 0 
+7f3e80000000-7f3e80021000 rw-p 00000000 00:00 0 
+7f3e80021000-7f3e84000000 ---p 00000000 00:00 0 
+7f3e84000000-7f3e84021000 rw-p 00000000 00:00 0 
+7f3e84021000-7f3e88000000 ---p 00000000 00:00 0 
+7f3e88000000-7f3e88021000 rw-p 00000000 00:00 0 
+7f3e88021000-7f3e8c000000 ---p 00000000 00:00 0 
+7f3e8c000000-7f3e8c021000 rw-p 00000000 00:00 0 
+7f3e8c021000-7f3e90000000 ---p 00000000 00:00 0 
+7f3e90000000-7f3e90021000 rw-p 00000000 00:00 0 
+7f3e90021000-7f3e94000000 ---p 00000000 00:00 0 
+7f3e94000000-7f3e94021000 rw-p 00000000 00:00 0 
+7f3e94021000-7f3e98000000 ---p 00000000 00:00 0 
+7f3e98000000-7f3e98021000 rw-p 00000000 00:00 0 
+7f3e98021000-7f3e9c000000 ---p 00000000 00:00 0 
+7f3e9c000000-7f3e9c3c7000 rw-p 00000000 00:00 0 
+7f3e9c3c7000-7f3ea0000000 ---p 00000000 00:00 0 
+7f3ea0000000-7f3ea0021000 rw-p 00000000 00:00 0 
+7f3ea0021000-7f3ea4000000 ---p 00000000 00:00 0 
+7f3ea4000000-7f3ea4021000 rw-p 00000000 00:00 0 
+7f3ea4021000-7f3ea8000000 ---p 00000000 00:00 0 
+7f3ea8000000-7f3ea8021000 rw-p 00000000 00:00 0 
+7f3ea8021000-7f3eac000000 ---p 00000000 00:00 0 
+7f3eac000000-7f3eac021000 rw-p 00000000 00:00 0 
+7f3eac021000-7f3eb0000000 ---p 00000000 00:00 0 
+7f3eb0000000-7f3eb0021000 rw-p 00000000 00:00 0 
+7f3eb0021000-7f3eb4000000 ---p 00000000 00:00 0 
+7f3eb4000000-7f3eb4021000 rw-p 00000000 00:00 0 
+7f3eb4021000-7f3eb8000000 ---p 00000000 00:00 0 
+7f3eb8000000-7f3eb8021000 rw-p 00000000 00:00 0 
+7f3eb8021000-7f3ebc000000 ---p 00000000 00:00 0 
+7f3ebc000000-7f3ebc021000 rw-p 00000000 00:00 0 
+7f3ebc021000-7f3ec0000000 ---p 00000000 00:00 0 
+7f3ec0008000-7f3ec0014000 r-xp 00000000 08:03 15208473                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DemandUGens.so
+7f3ec0014000-7f3ec0214000 ---p 0000c000 08:03 15208473                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DemandUGens.so
+7f3ec0214000-7f3ec0215000 r--p 0000c000 08:03 15208473                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DemandUGens.so
+7f3ec0215000-7f3ec0216000 rw-p 0000d000 08:03 15208473                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DemandUGens.so
+7f3ec0216000-7f3ec021d000 r-xp 00000000 08:03 15208471                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/ChaosUGens.so
+7f3ec021d000-7f3ec041c000 ---p 00007000 08:03 15208471                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/ChaosUGens.so
+7f3ec041c000-7f3ec041d000 r--p 00006000 08:03 15208471                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/ChaosUGens.so
+7f3ec041d000-7f3ec041e000 rw-p 00007000 08:03 15208471                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/ChaosUGens.so
+7f3ec041e000-7f3ec0421000 r-xp 00000000 08:03 15208334                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/LoopBuf.so
+7f3ec0421000-7f3ec0620000 ---p 00003000 08:03 15208334                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/LoopBuf.so
+7f3ec0620000-7f3ec0621000 r--p 00002000 08:03 15208334                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/LoopBuf.so
+7f3ec0621000-7f3ec0622000 rw-p 00003000 08:03 15208334                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/LoopBuf.so
+7f3ec0622000-7f3ec062c000 r-xp 00000000 08:03 15208339                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDFFTUGens.so
+7f3ec062c000-7f3ec082b000 ---p 0000a000 08:03 15208339                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDFFTUGens.so
+7f3ec082b000-7f3ec082c000 r--p 00009000 08:03 15208339                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDFFTUGens.so
+7f3ec082c000-7f3ec082d000 rw-p 0000a000 08:03 15208339                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDFFTUGens.so
+7f3ec082d000-7f3ec0839000 rw-p 00000000 00:00 0 
+7f3ec0839000-7f3ec083c000 r-xp 00000000 08:03 15208359                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/VOSIM.so
+7f3ec083c000-7f3ec0a3b000 ---p 00003000 08:03 15208359                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/VOSIM.so
+7f3ec0a3b000-7f3ec0a3c000 r--p 00002000 08:03 15208359                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/VOSIM.so
+7f3ec0a3c000-7f3ec0a3d000 rw-p 00003000 08:03 15208359                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/VOSIM.so
+7f3ec0a3d000-7f3ec0a5b000 r-xp 00000000 08:03 15208332                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/JoshUGens.so
+7f3ec0a5b000-7f3ec0c5b000 ---p 0001e000 08:03 15208332                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/JoshUGens.so
+7f3ec0c5b000-7f3ec0c5c000 r--p 0001e000 08:03 15208332                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/JoshUGens.so
+7f3ec0c5c000-7f3ec0c5d000 rw-p 0001f000 08:03 15208332                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/JoshUGens.so
+7f3ec0c5d000-7f3ec0c67000 r-xp 00000000 08:03 15208484                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/ML_UGens.so
+7f3ec0c67000-7f3ec0e66000 ---p 0000a000 08:03 15208484                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/ML_UGens.so
+7f3ec0e66000-7f3ec0e67000 r--p 00009000 08:03 15208484                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/ML_UGens.so
+7f3ec0e67000-7f3ec0e6f000 rw-p 0000a000 08:03 15208484                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/ML_UGens.so
+7f3ec0e6f000-7f3ec0eab000 rw-p 00000000 00:00 0 
+7f3ec0eab000-7f3ec0ebb000 r-xp 00000000 08:03 15208329                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/JoshAmbiUGens.so
+7f3ec0ebb000-7f3ec10ba000 ---p 00010000 08:03 15208329                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/JoshAmbiUGens.so
+7f3ec10ba000-7f3ec10bb000 r--p 0000f000 08:03 15208329                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/JoshAmbiUGens.so
+7f3ec10bb000-7f3ec10bc000 rw-p 00010000 08:03 15208329                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/JoshAmbiUGens.so
+7f3ec10bc000-7f3ec10be000 r-xp 00000000 08:03 15208342                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDOscUGens.so
+7f3ec10be000-7f3ec12bd000 ---p 00002000 08:03 15208342                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDOscUGens.so
+7f3ec12bd000-7f3ec12be000 r--p 00001000 08:03 15208342                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDOscUGens.so
+7f3ec12be000-7f3ec12bf000 rw-p 00002000 08:03 15208342                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDOscUGens.so
+7f3ec12bf000-7f3ec12c7000 r-xp 00000000 08:03 15208357                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/TJUGens.so
+7f3ec12c7000-7f3ec14c6000 ---p 00008000 08:03 15208357                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/TJUGens.so
+7f3ec14c6000-7f3ec14c7000 r--p 00007000 08:03 15208357                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/TJUGens.so
+7f3ec14c7000-7f3ec14c8000 rw-p 00008000 08:03 15208357                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/TJUGens.so
+7f3ec14c8000-7f3ec14cb000 r-xp 00000000 08:03 15208325                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BlackrainUGens.so
+7f3ec14cb000-7f3ec16cb000 ---p 00003000 08:03 15208325                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BlackrainUGens.so
+7f3ec16cb000-7f3ec16cc000 r--p 00003000 08:03 15208325                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BlackrainUGens.so
+7f3ec16cc000-7f3ec16cd000 rw-p 00004000 08:03 15208325                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BlackrainUGens.so
+7f3ec16cd000-7f3ec16cf000 r-xp 00000000 08:03 15208343                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDPollUGens.so
+7f3ec16cf000-7f3ec18ce000 ---p 00002000 08:03 15208343                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDPollUGens.so
+7f3ec18ce000-7f3ec18cf000 r--p 00001000 08:03 15208343                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDPollUGens.so
+7f3ec18cf000-7f3ec18d0000 rw-p 00002000 08:03 15208343                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDPollUGens.so
+7f3ec18d0000-7f3ec18d6000 r-xp 00000000 08:03 15208487                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/NoiseUGens.so
+7f3ec18d6000-7f3ec1ad5000 ---p 00006000 08:03 15208487                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/NoiseUGens.so
+7f3ec1ad5000-7f3ec1ad6000 r--p 00005000 08:03 15208487                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/NoiseUGens.so
+7f3ec1ad6000-7f3ec1ad7000 rw-p 00006000 08:03 15208487                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/NoiseUGens.so
+7f3ec1ad7000-7f3ec1adb000 r-xp 00000000 08:03 15207855                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/AmbisonicUGens.so
+7f3ec1adb000-7f3ec1cdb000 ---p 00004000 08:03 15207855                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/AmbisonicUGens.so
+7f3ec1cdb000-7f3ec1cdc000 r--p 00004000 08:03 15207855                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/AmbisonicUGens.so
+7f3ec1cdc000-7f3ec1cdd000 rw-p 00005000 08:03 15207855                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/AmbisonicUGens.so
+7f3ec1cdd000-7f3ec1ce0000 r-xp 00000000 08:03 15208475                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DynNoiseUGens.so
+7f3ec1ce0000-7f3ec1edf000 ---p 00003000 08:03 15208475                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DynNoiseUGens.so
+7f3ec1edf000-7f3ec1ee0000 r--p 00002000 08:03 15208475                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DynNoiseUGens.so
+7f3ec1ee0000-7f3ec1ee1000 rw-p 00003000 08:03 15208475                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/DynNoiseUGens.so
+7f3ec1ee1000-7f3ec1ee3000 r-xp 00000000 08:03 15208351                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/RFWUGens.so
+7f3ec1ee3000-7f3ec20e2000 ---p 00002000 08:03 15208351                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/RFWUGens.so
+7f3ec20e2000-7f3ec20e3000 r--p 00001000 08:03 15208351                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/RFWUGens.so
+7f3ec20e3000-7f3ec20e4000 rw-p 00002000 08:03 15208351                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/RFWUGens.so
+7f3ec20e4000-7f3ec20f7000 r-xp 00000000 08:03 15208331                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/JoshPVUGens.so
+7f3ec20f7000-7f3ec22f6000 ---p 00013000 08:03 15208331                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/JoshPVUGens.so
+7f3ec22f6000-7f3ec22f7000 r--p 00012000 08:03 15208331                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/JoshPVUGens.so
+7f3ec22f7000-7f3ec22f8000 rw-p 00013000 08:03 15208331                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/JoshPVUGens.so
+7f3ec22f8000-7f3ec2304000 rw-p 00000000 00:00 0 
+7f3ec2304000-7f3ec2311000 r-xp 00000000 08:03 15208349                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/NCAnalysisUGens.so
+7f3ec2311000-7f3ec2510000 ---p 0000d000 08:03 15208349                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/NCAnalysisUGens.so
+7f3ec2510000-7f3ec2511000 r--p 0000c000 08:03 15208349                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/NCAnalysisUGens.so
+7f3ec2511000-7f3ec2512000 rw-p 0000d000 08:03 15208349                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/NCAnalysisUGens.so
+7f3ec2512000-7f3ec255d000 rw-p 00000000 00:00 0 
+7f3ec255d000-7f3ec2563000 r-xp 00000000 08:03 15208324                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobNoise.so
+7f3ec2563000-7f3ec2762000 ---p 00006000 08:03 15208324                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobNoise.so
+7f3ec2762000-7f3ec2763000 r--p 00005000 08:03 15208324                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobNoise.so
+7f3ec2763000-7f3ec2764000 rw-p 00006000 08:03 15208324                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/BhobNoise.so
+7f3ec2764000-7f3ec2766000 r-xp 00000000 08:03 15208493                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/TestUGens.so
+7f3ec2766000-7f3ec2965000 ---p 00002000 08:03 15208493                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/TestUGens.so
+7f3ec2965000-7f3ec2966000 r--p 00001000 08:03 15208493                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/TestUGens.so
+7f3ec2966000-7f3ec2967000 rw-p 00002000 08:03 15208493                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/TestUGens.so
+7f3ec2967000-7f3ec296b000 r-xp 00000000 08:03 15208335                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDBufferUGens.so
+7f3ec296b000-7f3ec2b6a000 ---p 00004000 08:03 15208335                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDBufferUGens.so
+7f3ec2b6a000-7f3ec2b6b000 r--p 00003000 08:03 15208335                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDBufferUGens.so
+7f3ec2b6b000-7f3ec2b6c000 rw-p 00004000 08:03 15208335                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/MCLDBufferUGens.so
+7f3ec2b6c000-7f3ec2b6f000 r-xp 00000000 08:03 15208328                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/GlitchUGens.so
+7f3ec2b6f000-7f3ec2d6e000 ---p 00003000 08:03 15208328                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/GlitchUGens.so
+7f3ec2d6e000-7f3ec2d6f000 r--p 00002000 08:03 15208328                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/GlitchUGens.so
+7f3ec2d6f000-7f3ec2d70000 rw-p 00003000 08:03 15208328                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/GlitchUGens.so
+7f3ec2d70000-7f3ec2d75000 r-xp 00000000 08:03 400542                     /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+7f3ec2d75000-7f3ec2f74000 ---p 00005000 08:03 400542                     /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+7f3ec2f74000-7f3ec2f75000 r--p 00004000 08:03 400542                     /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+7f3ec2f75000-7f3ec2f76000 rw-p 00005000 08:03 400542                     /usr/lib/x86_64-linux-gnu/libasyncns.so.0.3.1
+7f3ec2f76000-7f3ec2f7e000 r-xp 00000000 08:03 1835517                    /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+7f3ec2f7e000-7f3ec317e000 ---p 00008000 08:03 1835517                    /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+7f3ec317e000-7f3ec317f000 r--p 00008000 08:03 1835517                    /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+7f3ec317f000-7f3ec3180000 rw-p 00009000 08:03 1835517                    /lib/x86_64-linux-gnu/libwrap.so.0.7.6
+7f3ec3180000-7f3ec31e2000 r-xp 00000000 08:03 787841                     /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-3.0.so
+7f3ec31e2000-7f3ec33e1000 ---p 00062000 08:03 787841                     /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-3.0.so
+7f3ec33e1000-7f3ec33e2000 r--p 00061000 08:03 787841                     /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-3.0.so
+7f3ec33e2000-7f3ec33e3000 rw-p 00062000 08:03 787841                     /usr/lib/x86_64-linux-gnu/pulseaudio/libpulsecommon-3.0.so
+7f3ec33e3000-7f3ec33eb000 r-xp 00000000 08:03 1835187                    /lib/x86_64-linux-gnu/libjson.so.0.1.0
+7f3ec33eb000-7f3ec35ea000 ---p 00008000 08:03 1835187                    /lib/x86_64-linux-gnu/libjson.so.0.1.0
+7f3ec35ea000-7f3ec35eb000 r--p 00007000 08:03 1835187                    /lib/x86_64-linux-gnu/libjson.so.0.1.0
+7f3ec35eb000-7f3ec35ec000 rw-p 00008000 08:03 1835187                    /lib/x86_64-linux-gnu/libjson.so.0.1.0
+7f3ec35ec000-7f3ec3633000 r-xp 00000000 08:03 400121                     /usr/lib/x86_64-linux-gnu/libpulse.so.0.15.3
+7f3ec3633000-7f3ec3832000 ---p 00047000 08:03 400121                     /usr/lib/x86_64-linux-gnu/libpulse.so.0.15.3
+7f3ec3832000-7f3ec3833000 r--p 00046000 08:03 400121                     /usr/lib/x86_64-linux-gnu/libpulse.so.0.15.3
+7f3ec3833000-7f3ec3834000 rw-p 00047000 08:03 400121                     /usr/lib/x86_64-linux-gnu/libpulse.so.0.15.3
+7f3ec3834000-7f3ec3837000 ---p 00000000 00:00 0 
+7f3ec3837000-7f3ec3935000 rw-p 00000000 00:00 0                          [stack:8180]
+7f3ec3935000-7f3ec3938000 ---p 00000000 00:00 0 
+7f3ec3938000-7f3ec3a36000 rw-p 00000000 00:00 0                          [stack:8179]
+7f3ec3a36000-7f3ec3b1a000 r-xp 00000000 08:03 394346                     /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f3ec3b1a000-7f3ec3d19000 ---p 000e4000 08:03 394346                     /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f3ec3d19000-7f3ec3d1f000 r--p 000e3000 08:03 394346                     /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f3ec3d1f000-7f3ec3d20000 rw-p 000e9000 08:03 394346                     /usr/lib/x86_64-linux-gnu/libasound.so.2.0.0
+7f3ec3d20000-7f3ec8000000 rw-p 00000000 00:00 0 
+7f3ec8000000-7f3ec8021000 rw-p 00000000 00:00 0 
+7f3ec8021000-7f3ecc000000 ---p 00000000 00:00 0 
+7f3ecc000000-7f3ecc021000 rw-p 00000000 00:00 0 
+7f3ecc021000-7f3ed0000000 ---p 00000000 00:00 0 
+7f3ed0063000-7f3ed0072000 r-xp 00000000 08:03 1838805                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjsoundalsa.so
+7f3ed0072000-7f3ed0271000 ---p 0000f000 08:03 1838805                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjsoundalsa.so
+7f3ed0271000-7f3ed0272000 r--p 0000e000 08:03 1838805                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjsoundalsa.so
+7f3ed0272000-7f3ed0273000 rw-p 0000f000 08:03 1838805                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjsoundalsa.so
+7f3ed0273000-7f3ed0274000 r-xp 00000000 08:03 1838824                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjsound.so
+7f3ed0274000-7f3ed0473000 ---p 00001000 08:03 1838824                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjsound.so
+7f3ed0473000-7f3ed0474000 r--p 00000000 08:03 1838824                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjsound.so
+7f3ed0474000-7f3ed0475000 rw-p 00001000 08:03 1838824                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjsound.so
+7f3ed0475000-7f3ed0478000 ---p 00000000 00:00 0 
+7f3ed0478000-7f3ed0576000 rw-p 00000000 00:00 0                          [stack:8178]
+7f3ed0576000-7f3ed0579000 ---p 00000000 00:00 0 
+7f3ed0579000-7f3ed0677000 rw-p 00000000 00:00 0                          [stack:8177]
+7f3ed0677000-7f3ed067a000 ---p 00000000 00:00 0 
+7f3ed067a000-7f3ed0778000 rw-p 00000000 00:00 0                          [stack:8176]
+7f3ed0778000-7f3ed077b000 ---p 00000000 00:00 0 
+7f3ed077b000-7f3ed0879000 rw-p 00000000 00:00 0                          [stack:8175]
+7f3ed0879000-7f3ed087c000 ---p 00000000 00:00 0 
+7f3ed087c000-7f3ed097a000 rw-p 00000000 00:00 0                          [stack:8174]
+7f3ed097a000-7f3ed097d000 ---p 00000000 00:00 0 
+7f3ed097d000-7f3ed0a7b000 rw-p 00000000 00:00 0                          [stack:8173]
+7f3ed0a7b000-7f3ed0a7e000 ---p 00000000 00:00 0 
+7f3ed0a7e000-7f3ed0b7c000 rw-p 00000000 00:00 0                          [stack:8172]
+7f3ed0b7c000-7f3ed0b7f000 ---p 00000000 00:00 0 
+7f3ed0b7f000-7f3ed0c7d000 rw-p 00000000 00:00 0                          [stack:8171]
+7f3ed0c7d000-7f3ed0c80000 ---p 00000000 00:00 0 
+7f3ed0c80000-7f3ed0d7e000 rw-p 00000000 00:00 0                          [stack:8170]
+7f3ed0d7e000-7f3ed0d81000 ---p 00000000 00:00 0 
+7f3ed0d81000-7f3ed0e7f000 rw-p 00000000 00:00 0                          [stack:8169]
+7f3ed0e7f000-7f3ed0e82000 ---p 00000000 00:00 0 
+7f3ed0e82000-7f3ed0f80000 rw-p 00000000 00:00 0                          [stack:8168]
+7f3ed0f80000-7f3ed0f83000 ---p 00000000 00:00 0 
+7f3ed0f83000-7f3ed1081000 rw-p 00000000 00:00 0                          [stack:8167]
+7f3ed1081000-7f3ed1084000 ---p 00000000 00:00 0 
+7f3ed1084000-7f3ed1182000 rw-p 00000000 00:00 0                          [stack:8166]
+7f3ed1182000-7f3ed1185000 ---p 00000000 00:00 0 
+7f3ed1185000-7f3ed1283000 rw-p 00000000 00:00 0                          [stack:8165]
+7f3ed1283000-7f3ed1286000 ---p 00000000 00:00 0 
+7f3ed1286000-7f3ed1384000 rw-p 00000000 00:00 0                          [stack:8164]
+7f3ed1384000-7f3ed1387000 ---p 00000000 00:00 0 
+7f3ed1387000-7f3ed1485000 rw-p 00000000 00:00 0                          [stack:8163]
+7f3ed1485000-7f3ed1488000 ---p 00000000 00:00 0 
+7f3ed1488000-7f3ed1586000 rw-p 00000000 00:00 0                          [stack:8162]
+7f3ed1586000-7f3ed1589000 ---p 00000000 00:00 0 
+7f3ed1589000-7f3ed1687000 rw-p 00000000 00:00 0                          [stack:8161]
+7f3ed1687000-7f3ed168a000 ---p 00000000 00:00 0 
+7f3ed168a000-7f3ed1788000 rw-p 00000000 00:00 0                          [stack:8160]
+7f3ed1788000-7f3ed178b000 ---p 00000000 00:00 0 
+7f3ed178b000-7f3ed1889000 rw-p 00000000 00:00 0                          [stack:8159]
+7f3ed1889000-7f3ed188f000 r-xp 00000000 08:03 400989                     /usr/lib/x86_64-linux-gnu/libogg.so.0.8.0
+7f3ed188f000-7f3ed1a8e000 ---p 00006000 08:03 400989                     /usr/lib/x86_64-linux-gnu/libogg.so.0.8.0
+7f3ed1a8e000-7f3ed1a8f000 r--p 00005000 08:03 400989                     /usr/lib/x86_64-linux-gnu/libogg.so.0.8.0
+7f3ed1a8f000-7f3ed1a90000 rw-p 00006000 08:03 400989                     /usr/lib/x86_64-linux-gnu/libogg.so.0.8.0
+7f3ed1a90000-7f3ed1abb000 r-xp 00000000 08:03 401195                     /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f3ed1abb000-7f3ed1cbb000 ---p 0002b000 08:03 401195                     /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f3ed1cbb000-7f3ed1cbc000 r--p 0002b000 08:03 401195                     /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f3ed1cbc000-7f3ed1cbd000 rw-p 0002c000 08:03 401195                     /usr/lib/x86_64-linux-gnu/libvorbis.so.0.4.5
+7f3ed1cbd000-7f3ed1f70000 r-xp 00000000 08:03 401197                     /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.8
+7f3ed1f70000-7f3ed216f000 ---p 002b3000 08:03 401197                     /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.8
+7f3ed216f000-7f3ed218b000 r--p 002b2000 08:03 401197                     /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.8
+7f3ed218b000-7f3ed218c000 rw-p 002ce000 08:03 401197                     /usr/lib/x86_64-linux-gnu/libvorbisenc.so.2.0.8
+7f3ed218c000-7f3ed21d6000 r-xp 00000000 08:03 400394                     /usr/lib/x86_64-linux-gnu/libFLAC.so.8.2.0
+7f3ed21d6000-7f3ed23d6000 ---p 0004a000 08:03 400394                     /usr/lib/x86_64-linux-gnu/libFLAC.so.8.2.0
+7f3ed23d6000-7f3ed23d7000 r--p 0004a000 08:03 400394                     /usr/lib/x86_64-linux-gnu/libFLAC.so.8.2.0
+7f3ed23d7000-7f3ed23d8000 rw-p 0004b000 08:03 400394                     /usr/lib/x86_64-linux-gnu/libFLAC.so.8.2.0
+7f3ed23d8000-7f3ed25bf000 r-xp 00000000 08:03 394147                     /usr/lib/x86_64-linux-gnu/libfftw3f.so.3.3.2
+7f3ed25bf000-7f3ed27bf000 ---p 001e7000 08:03 394147                     /usr/lib/x86_64-linux-gnu/libfftw3f.so.3.3.2
+7f3ed27bf000-7f3ed27d0000 r--p 001e7000 08:03 394147                     /usr/lib/x86_64-linux-gnu/libfftw3f.so.3.3.2
+7f3ed27d0000-7f3ed27d1000 rw-p 001f8000 08:03 394147                     /usr/lib/x86_64-linux-gnu/libfftw3f.so.3.3.2
+7f3ed27d1000-7f3ed2826000 r-xp 00000000 08:03 400536                     /usr/lib/x86_64-linux-gnu/libjack.so.0.1.0
+7f3ed2826000-7f3ed2a25000 ---p 00055000 08:03 400536                     /usr/lib/x86_64-linux-gnu/libjack.so.0.1.0
+7f3ed2a25000-7f3ed2a28000 r--p 00054000 08:03 400536                     /usr/lib/x86_64-linux-gnu/libjack.so.0.1.0
+7f3ed2a28000-7f3ed2a29000 rw-p 00057000 08:03 400536                     /usr/lib/x86_64-linux-gnu/libjack.so.0.1.0
+7f3ed2a29000-7f3ed2a2a000 rw-p 00000000 00:00 0 
+7f3ed2a2a000-7f3ed2a89000 r-xp 00000000 08:03 401106                     /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.25
+7f3ed2a89000-7f3ed2c89000 ---p 0005f000 08:03 401106                     /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.25
+7f3ed2c89000-7f3ed2c8b000 r--p 0005f000 08:03 401106                     /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.25
+7f3ed2c8b000-7f3ed2c8c000 rw-p 00061000 08:03 401106                     /usr/lib/x86_64-linux-gnu/libsndfile.so.1.0.25
+7f3ed2c8c000-7f3ed2c90000 rw-p 00000000 00:00 0 
+7f3ed2c90000-7f3ed3dff000 r-xp 00000000 08:03 395726                     /usr/lib/x86_64-linux-gnu/libicudata.so.48.1.1
+7f3ed3dff000-7f3ed3ffe000 ---p 0116f000 08:03 395726                     /usr/lib/x86_64-linux-gnu/libicudata.so.48.1.1
+7f3ed3ffe000-7f3ed3fff000 r--p 0116e000 08:03 395726                     /usr/lib/x86_64-linux-gnu/libicudata.so.48.1.1
+7f3ed3fff000-7f3ed4000000 rw-p 0116f000 08:03 395726                     /usr/lib/x86_64-linux-gnu/libicudata.so.48.1.1
+7f3ed4000000-7f3ed4021000 rw-p 00000000 00:00 0 
+7f3ed4021000-7f3ed8000000 ---p 00000000 00:00 0 
+7f3ed8086000-7f3ed80e8000 r-xp 00000000 08:03 15208483                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/libscsynth.so
+7f3ed80e8000-7f3ed82e8000 ---p 00062000 08:03 15208483                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/libscsynth.so
+7f3ed82e8000-7f3ed82ea000 r--p 00062000 08:03 15208483                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/libscsynth.so
+7f3ed82ea000-7f3ed82ec000 rw-p 00064000 08:03 15208483                   /home/vishnu/Documents/markovmusic/target/native/linux/x86_64/libscsynth.so
+7f3ed82ec000-7f3ed830c000 rw-p 00000000 00:00 0 
+7f3ed830c000-7f3ed8323000 r-xp 00000000 08:03 15208671                   /tmp/jna/jna3128539459716705871.tmp (deleted)
+7f3ed8323000-7f3ed8522000 ---p 00017000 08:03 15208671                   /tmp/jna/jna3128539459716705871.tmp (deleted)
+7f3ed8522000-7f3ed8523000 r--p 00016000 08:03 15208671                   /tmp/jna/jna3128539459716705871.tmp (deleted)
+7f3ed8523000-7f3ed8524000 rw-p 00017000 08:03 15208671                   /tmp/jna/jna3128539459716705871.tmp (deleted)
+7f3ed8524000-7f3ed8527000 ---p 00000000 00:00 0 
+7f3ed8527000-7f3ed8625000 rw-p 00000000 00:00 0                          [stack:8158]
+7f3ed8625000-7f3ed8628000 ---p 00000000 00:00 0 
+7f3ed8628000-7f3ed8726000 rw-p 00000000 00:00 0                          [stack:8157]
+7f3ed8726000-7f3ed8729000 r-xp 00000000 08:03 1838555                    /lib/x86_64-linux-gnu/libgpg-error.so.0.8.0
+7f3ed8729000-7f3ed8928000 ---p 00003000 08:03 1838555                    /lib/x86_64-linux-gnu/libgpg-error.so.0.8.0
+7f3ed8928000-7f3ed8929000 r--p 00002000 08:03 1838555                    /lib/x86_64-linux-gnu/libgpg-error.so.0.8.0
+7f3ed8929000-7f3ed892a000 rw-p 00003000 08:03 1838555                    /lib/x86_64-linux-gnu/libgpg-error.so.0.8.0
+7f3ed892a000-7f3ed892c000 r-xp 00000000 08:03 1835412                    /lib/x86_64-linux-gnu/libkeyutils.so.1.4
+7f3ed892c000-7f3ed8b2c000 ---p 00002000 08:03 1835412                    /lib/x86_64-linux-gnu/libkeyutils.so.1.4
+7f3ed8b2c000-7f3ed8b2d000 r--p 00002000 08:03 1835412                    /lib/x86_64-linux-gnu/libkeyutils.so.1.4
+7f3ed8b2d000-7f3ed8b2e000 rw-p 00003000 08:03 1835412                    /lib/x86_64-linux-gnu/libkeyutils.so.1.4
+7f3ed8b2e000-7f3ed8c84000 r-xp 00000000 08:03 395727                     /usr/lib/x86_64-linux-gnu/libicuuc.so.48.1.1
+7f3ed8c84000-7f3ed8e83000 ---p 00156000 08:03 395727                     /usr/lib/x86_64-linux-gnu/libicuuc.so.48.1.1
+7f3ed8e83000-7f3ed8e94000 r--p 00155000 08:03 395727                     /usr/lib/x86_64-linux-gnu/libicuuc.so.48.1.1
+7f3ed8e94000-7f3ed8e95000 rw-p 00166000 08:03 395727                     /usr/lib/x86_64-linux-gnu/libicuuc.so.48.1.1
+7f3ed8e95000-7f3ed8e99000 rw-p 00000000 00:00 0 
+7f3ed8e99000-7f3ed8ecb000 r-xp 00000000 08:03 395725                     /usr/lib/x86_64-linux-gnu/libicule.so.48.1.1
+7f3ed8ecb000-7f3ed90cb000 ---p 00032000 08:03 395725                     /usr/lib/x86_64-linux-gnu/libicule.so.48.1.1
+7f3ed90cb000-7f3ed90cd000 r--p 00032000 08:03 395725                     /usr/lib/x86_64-linux-gnu/libicule.so.48.1.1
+7f3ed90cd000-7f3ed90ce000 rw-p 00034000 08:03 395725                     /usr/lib/x86_64-linux-gnu/libicule.so.48.1.1
+7f3ed90ce000-7f3ed9111000 r-xp 00000000 08:03 1835406                    /lib/x86_64-linux-gnu/libdbus-1.so.3.7.2
+7f3ed9111000-7f3ed9310000 ---p 00043000 08:03 1835406                    /lib/x86_64-linux-gnu/libdbus-1.so.3.7.2
+7f3ed9310000-7f3ed9311000 r--p 00042000 08:03 1835406                    /lib/x86_64-linux-gnu/libdbus-1.so.3.7.2
+7f3ed9311000-7f3ed9312000 rw-p 00043000 08:03 1835406                    /lib/x86_64-linux-gnu/libdbus-1.so.3.7.2
+7f3ed9312000-7f3ed9324000 r-xp 00000000 08:03 409568                     /usr/lib/x86_64-linux-gnu/libp11-kit.so.0.0.0
+7f3ed9324000-7f3ed9524000 ---p 00012000 08:03 409568                     /usr/lib/x86_64-linux-gnu/libp11-kit.so.0.0.0
+7f3ed9524000-7f3ed9525000 r--p 00012000 08:03 409568                     /usr/lib/x86_64-linux-gnu/libp11-kit.so.0.0.0
+7f3ed9525000-7f3ed9526000 rw-p 00013000 08:03 409568                     /usr/lib/x86_64-linux-gnu/libp11-kit.so.0.0.0
+7f3ed9526000-7f3ed9535000 r-xp 00000000 08:03 399531                     /usr/lib/x86_64-linux-gnu/libtasn1.so.3.2.0
+7f3ed9535000-7f3ed9735000 ---p 0000f000 08:03 399531                     /usr/lib/x86_64-linux-gnu/libtasn1.so.3.2.0
+7f3ed9735000-7f3ed9736000 r--p 0000f000 08:03 399531                     /usr/lib/x86_64-linux-gnu/libtasn1.so.3.2.0
+7f3ed9736000-7f3ed9737000 rw-p 00010000 08:03 399531                     /usr/lib/x86_64-linux-gnu/libtasn1.so.3.2.0
+7f3ed9737000-7f3ed97b1000 r-xp 00000000 08:03 1835378                    /lib/x86_64-linux-gnu/libgcrypt.so.11.7.0
+7f3ed97b1000-7f3ed99b1000 ---p 0007a000 08:03 1835378                    /lib/x86_64-linux-gnu/libgcrypt.so.11.7.0
+7f3ed99b1000-7f3ed99b2000 r--p 0007a000 08:03 1835378                    /lib/x86_64-linux-gnu/libgcrypt.so.11.7.0
+7f3ed99b2000-7f3ed99b5000 rw-p 0007b000 08:03 1835378                    /lib/x86_64-linux-gnu/libgcrypt.so.11.7.0
+7f3ed99b5000-7f3ed99bc000 r-xp 00000000 08:03 400914                     /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+7f3ed99bc000-7f3ed9bbb000 ---p 00007000 08:03 400914                     /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+7f3ed9bbb000-7f3ed9bbc000 r--p 00006000 08:03 400914                     /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+7f3ed9bbc000-7f3ed9bbd000 rw-p 00007000 08:03 400914                     /usr/lib/x86_64-linux-gnu/libkrb5support.so.0.1
+7f3ed9bbd000-7f3ed9bc0000 r-xp 00000000 08:03 1835408                    /lib/x86_64-linux-gnu/libcom_err.so.2.1
+7f3ed9bc0000-7f3ed9dbf000 ---p 00003000 08:03 1835408                    /lib/x86_64-linux-gnu/libcom_err.so.2.1
+7f3ed9dbf000-7f3ed9dc0000 r--p 00002000 08:03 1835408                    /lib/x86_64-linux-gnu/libcom_err.so.2.1
+7f3ed9dc0000-7f3ed9dc1000 rw-p 00003000 08:03 1835408                    /lib/x86_64-linux-gnu/libcom_err.so.2.1
+7f3ed9dc1000-7f3ed9de7000 r-xp 00000000 08:03 400553                     /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+7f3ed9de7000-7f3ed9fe7000 ---p 00026000 08:03 400553                     /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+7f3ed9fe7000-7f3ed9fe8000 r--p 00026000 08:03 400553                     /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+7f3ed9fe8000-7f3ed9fe9000 rw-p 00027000 08:03 400553                     /usr/lib/x86_64-linux-gnu/libk5crypto.so.3.1
+7f3ed9fe9000-7f3ed9fea000 rw-p 00000000 00:00 0 
+7f3ed9fea000-7f3eda0ae000 r-xp 00000000 08:03 400791                     /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+7f3eda0ae000-7f3eda2ad000 ---p 000c4000 08:03 400791                     /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+7f3eda2ad000-7f3eda2b7000 r--p 000c3000 08:03 400791                     /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+7f3eda2b7000-7f3eda2b8000 rw-p 000cd000 08:03 400791                     /usr/lib/x86_64-linux-gnu/libkrb5.so.3.3
+7f3eda2b8000-7f3eda34d000 r-xp 00000000 08:03 395729                     /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.913.0
+7f3eda34d000-7f3eda54c000 ---p 00095000 08:03 395729                     /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.913.0
+7f3eda54c000-7f3eda54e000 r--p 00094000 08:03 395729                     /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.913.0
+7f3eda54e000-7f3eda54f000 rw-p 00096000 08:03 395729                     /usr/lib/x86_64-linux-gnu/libharfbuzz.so.0.913.0
+7f3eda54f000-7f3eda557000 r-xp 00000000 08:03 393434                     /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+7f3eda557000-7f3eda757000 ---p 00008000 08:03 393434                     /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+7f3eda757000-7f3eda758000 r--p 00008000 08:03 393434                     /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+7f3eda758000-7f3eda759000 rw-p 00009000 08:03 393434                     /usr/lib/x86_64-linux-gnu/libxcb-render.so.0.0.0
+7f3eda759000-7f3eda75b000 r-xp 00000000 08:03 393523                     /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7f3eda75b000-7f3eda95a000 ---p 00002000 08:03 393523                     /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7f3eda95a000-7f3eda95b000 r--p 00001000 08:03 393523                     /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7f3eda95b000-7f3eda95c000 rw-p 00002000 08:03 393523                     /usr/lib/x86_64-linux-gnu/libxcb-shm.so.0.0.0
+7f3eda95c000-7f3eda981000 r-xp 00000000 08:03 1835418                    /lib/x86_64-linux-gnu/libpng12.so.0.49.0
+7f3eda981000-7f3edab80000 ---p 00025000 08:03 1835418                    /lib/x86_64-linux-gnu/libpng12.so.0.49.0
+7f3edab80000-7f3edab81000 r--p 00024000 08:03 1835418                    /lib/x86_64-linux-gnu/libpng12.so.0.49.0
+7f3edab81000-7f3edab82000 rw-p 00025000 08:03 1835418                    /lib/x86_64-linux-gnu/libpng12.so.0.49.0
+7f3edab82000-7f3edac12000 r-xp 00000000 08:03 396874                     /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.28.2
+7f3edac12000-7f3edae11000 ---p 00090000 08:03 396874                     /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.28.2
+7f3edae11000-7f3edae18000 r--p 0008f000 08:03 396874                     /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.28.2
+7f3edae18000-7f3edae19000 rw-p 00096000 08:03 396874                     /usr/lib/x86_64-linux-gnu/libpixman-1.so.0.28.2
+7f3edae19000-7f3edae1e000 r-xp 00000000 08:03 400484                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f3edae1e000-7f3edb01d000 ---p 00005000 08:03 400484                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f3edb01d000-7f3edb01e000 r--p 00004000 08:03 400484                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f3edb01e000-7f3edb01f000 rw-p 00005000 08:03 400484                     /usr/lib/x86_64-linux-gnu/libXdmcp.so.6.0.0
+7f3edb01f000-7f3edb021000 r-xp 00000000 08:03 400473                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f3edb021000-7f3edb221000 ---p 00002000 08:03 400473                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f3edb221000-7f3edb222000 r--p 00002000 08:03 400473                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f3edb222000-7f3edb223000 rw-p 00003000 08:03 400473                     /usr/lib/x86_64-linux-gnu/libXau.so.6.0.0
+7f3edb223000-7f3edb232000 r-xp 00000000 08:03 400555                     /usr/lib/x86_64-linux-gnu/libavahi-client.so.3.2.9
+7f3edb232000-7f3edb432000 ---p 0000f000 08:03 400555                     /usr/lib/x86_64-linux-gnu/libavahi-client.so.3.2.9
+7f3edb432000-7f3edb433000 r--p 0000f000 08:03 400555                     /usr/lib/x86_64-linux-gnu/libavahi-client.so.3.2.9
+7f3edb433000-7f3edb434000 rw-p 00010000 08:03 400555                     /usr/lib/x86_64-linux-gnu/libavahi-client.so.3.2.9
+7f3edb434000-7f3edb43f000 r-xp 00000000 08:03 400996                     /usr/lib/x86_64-linux-gnu/libavahi-common.so.3.5.3
+7f3edb43f000-7f3edb63e000 ---p 0000b000 08:03 400996                     /usr/lib/x86_64-linux-gnu/libavahi-common.so.3.5.3
+7f3edb63e000-7f3edb63f000 r--p 0000a000 08:03 400996                     /usr/lib/x86_64-linux-gnu/libavahi-common.so.3.5.3
+7f3edb63f000-7f3edb640000 rw-p 0000b000 08:03 400996                     /usr/lib/x86_64-linux-gnu/libavahi-common.so.3.5.3
+7f3edb640000-7f3edb6f5000 r-xp 00000000 08:03 404781                     /usr/lib/x86_64-linux-gnu/libgnutls.so.26.22.6
+7f3edb6f5000-7f3edb8f4000 ---p 000b5000 08:03 404781                     /usr/lib/x86_64-linux-gnu/libgnutls.so.26.22.6
+7f3edb8f4000-7f3edb8fa000 r--p 000b4000 08:03 404781                     /usr/lib/x86_64-linux-gnu/libgnutls.so.26.22.6
+7f3edb8fa000-7f3edb8fb000 rw-p 000ba000 08:03 404781                     /usr/lib/x86_64-linux-gnu/libgnutls.so.26.22.6
+7f3edb8fb000-7f3edb8fc000 rw-p 00000000 00:00 0 
+7f3edb8fc000-7f3edb937000 r-xp 00000000 08:03 400908                     /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+7f3edb937000-7f3edbb37000 ---p 0003b000 08:03 400908                     /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+7f3edbb37000-7f3edbb38000 r--p 0003b000 08:03 400908                     /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+7f3edbb38000-7f3edbb3a000 rw-p 0003c000 08:03 400908                     /usr/lib/x86_64-linux-gnu/libgssapi_krb5.so.2.2
+7f3edbb3a000-7f3edbb60000 r-xp 00000000 08:03 1835315                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f3edbb60000-7f3edbd60000 ---p 00026000 08:03 1835315                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f3edbd60000-7f3edbd62000 r--p 00026000 08:03 1835315                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f3edbd62000-7f3edbd63000 rw-p 00028000 08:03 1835315                    /lib/x86_64-linux-gnu/libexpat.so.1.6.0
+7f3edbd63000-7f3edbdfa000 r-xp 00000000 08:03 394072                     /usr/lib/x86_64-linux-gnu/libfreetype.so.6.10.0
+7f3edbdfa000-7f3edbff9000 ---p 00097000 08:03 394072                     /usr/lib/x86_64-linux-gnu/libfreetype.so.6.10.0
+7f3edbff9000-7f3edbfff000 r--p 00096000 08:03 394072                     /usr/lib/x86_64-linux-gnu/libfreetype.so.6.10.0
+7f3edbfff000-7f3edc000000 rw-p 0009c000 08:03 394072                     /usr/lib/x86_64-linux-gnu/libfreetype.so.6.10.0
+7f3edc000000-7f3edc021000 rw-p 00000000 00:00 0 
+7f3edc021000-7f3ee0000000 ---p 00000000 00:00 0 
+7f3ee0030000-7f3ee0031000 ---p 00000000 00:00 0 
+7f3ee0031000-7f3ee00b1000 rw-p 00000000 00:00 0 
+7f3ee00b1000-7f3ee00b4000 ---p 00000000 00:00 0 
+7f3ee00b4000-7f3ee01b2000 rw-p 00000000 00:00 0                          [stack:8156]
+7f3ee01b2000-7f3ee01b4000 r-xp 00000000 08:03 400482                     /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f3ee01b4000-7f3ee03b3000 ---p 00002000 08:03 400482                     /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f3ee03b3000-7f3ee03b4000 r--p 00001000 08:03 400482                     /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f3ee03b4000-7f3ee03b5000 rw-p 00002000 08:03 400482                     /usr/lib/x86_64-linux-gnu/libXdamage.so.1.1.0
+7f3ee03b5000-7f3ee03b7000 r-xp 00000000 08:03 400478                     /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7f3ee03b7000-7f3ee05b6000 ---p 00002000 08:03 400478                     /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7f3ee05b6000-7f3ee05b7000 r--p 00001000 08:03 400478                     /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7f3ee05b7000-7f3ee05b8000 rw-p 00002000 08:03 400478                     /usr/lib/x86_64-linux-gnu/libXcomposite.so.1.0.0
+7f3ee05b8000-7f3ee05c1000 r-xp 00000000 08:03 394983                     /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f3ee05c1000-7f3ee07c1000 ---p 00009000 08:03 394983                     /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f3ee07c1000-7f3ee07c2000 r--p 00009000 08:03 394983                     /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f3ee07c2000-7f3ee07c3000 rw-p 0000a000 08:03 394983                     /usr/lib/x86_64-linux-gnu/libXcursor.so.1.0.2
+7f3ee07c3000-7f3ee07cc000 r-xp 00000000 08:03 398921                     /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7f3ee07cc000-7f3ee09cb000 ---p 00009000 08:03 398921                     /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7f3ee09cb000-7f3ee09cc000 r--p 00008000 08:03 398921                     /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7f3ee09cc000-7f3ee09cd000 rw-p 00009000 08:03 398921                     /usr/lib/x86_64-linux-gnu/libXrandr.so.2.2.0
+7f3ee09cd000-7f3ee09cf000 r-xp 00000000 08:03 400012                     /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f3ee09cf000-7f3ee0bce000 ---p 00002000 08:03 400012                     /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f3ee0bce000-7f3ee0bcf000 r--p 00001000 08:03 400012                     /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f3ee0bcf000-7f3ee0bd0000 rw-p 00002000 08:03 400012                     /usr/lib/x86_64-linux-gnu/libXinerama.so.1.0.0
+7f3ee0bd0000-7f3ee0be3000 r-xp 00000000 08:03 395739                     /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.3200.5
+7f3ee0be3000-7f3ee0de2000 ---p 00013000 08:03 395739                     /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.3200.5
+7f3ee0de2000-7f3ee0de3000 r--p 00012000 08:03 395739                     /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.3200.5
+7f3ee0de3000-7f3ee0de4000 rw-p 00013000 08:03 395739                     /usr/lib/x86_64-linux-gnu/libpangoft2-1.0.so.0.3200.5
+7f3ee0de4000-7f3ee0ee2000 r-xp 00000000 08:03 394301                     /usr/lib/x86_64-linux-gnu/libcairo.so.2.11200.14
+7f3ee0ee2000-7f3ee10e2000 ---p 000fe000 08:03 394301                     /usr/lib/x86_64-linux-gnu/libcairo.so.2.11200.14
+7f3ee10e2000-7f3ee10e5000 r--p 000fe000 08:03 394301                     /usr/lib/x86_64-linux-gnu/libcairo.so.2.11200.14
+7f3ee10e5000-7f3ee10e6000 rw-p 00101000 08:03 394301                     /usr/lib/x86_64-linux-gnu/libcairo.so.2.11200.14
+7f3ee10e6000-7f3ee10e8000 rw-p 00000000 00:00 0 
+7f3ee10e8000-7f3ee1108000 r-xp 00000000 08:03 399205                     /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.20809.1
+7f3ee1108000-7f3ee1307000 ---p 00020000 08:03 399205                     /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.20809.1
+7f3ee1307000-7f3ee1309000 r--p 0001f000 08:03 399205                     /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.20809.1
+7f3ee1309000-7f3ee130a000 rw-p 00021000 08:03 399205                     /usr/lib/x86_64-linux-gnu/libatk-1.0.so.0.20809.1
+7f3ee130a000-7f3ee130f000 r-xp 00000000 08:03 394123                     /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f3ee130f000-7f3ee150e000 ---p 00005000 08:03 394123                     /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f3ee150e000-7f3ee150f000 r--p 00004000 08:03 394123                     /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f3ee150f000-7f3ee1510000 rw-p 00005000 08:03 394123                     /usr/lib/x86_64-linux-gnu/libXfixes.so.3.1.0
+7f3ee1510000-7f3ee151b000 r-xp 00000000 08:03 395735                     /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.3200.5
+7f3ee151b000-7f3ee171b000 ---p 0000b000 08:03 395735                     /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.3200.5
+7f3ee171b000-7f3ee171c000 r--p 0000b000 08:03 395735                     /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.3200.5
+7f3ee171c000-7f3ee171d000 rw-p 0000c000 08:03 395735                     /usr/lib/x86_64-linux-gnu/libpangocairo-1.0.so.0.3200.5
+7f3ee171d000-7f3ee173a000 r-xp 00000000 08:03 393665                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f3ee173a000-7f3ee1939000 ---p 0001d000 08:03 393665                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f3ee1939000-7f3ee193a000 r--p 0001c000 08:03 393665                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f3ee193a000-7f3ee193b000 rw-p 0001d000 08:03 393665                     /usr/lib/x86_64-linux-gnu/libxcb.so.1.1.0
+7f3ee193b000-7f3ee1995000 r-xp 00000000 08:03 393875                     /usr/lib/x86_64-linux-gnu/libcups.so.2
+7f3ee1995000-7f3ee1b95000 ---p 0005a000 08:03 393875                     /usr/lib/x86_64-linux-gnu/libcups.so.2
+7f3ee1b95000-7f3ee1b9a000 r--p 0005a000 08:03 393875                     /usr/lib/x86_64-linux-gnu/libcups.so.2
+7f3ee1b9a000-7f3ee1b9b000 rw-p 0005f000 08:03 393875                     /usr/lib/x86_64-linux-gnu/libcups.so.2
+7f3ee1b9b000-7f3ee1b9c000 r-xp 00000000 08:03 396967                     /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.3600.0
+7f3ee1b9c000-7f3ee1d9b000 ---p 00001000 08:03 396967                     /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.3600.0
+7f3ee1d9b000-7f3ee1d9c000 r--p 00000000 08:03 396967                     /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.3600.0
+7f3ee1d9c000-7f3ee1d9d000 rw-p 00001000 08:03 396967                     /usr/lib/x86_64-linux-gnu/libgthread-2.0.so.0.3600.0
+7f3ee1d9d000-7f3ee1dd4000 r-xp 00000000 08:03 394298                     /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.6.2
+7f3ee1dd4000-7f3ee1fd4000 ---p 00037000 08:03 394298                     /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.6.2
+7f3ee1fd4000-7f3ee1fd5000 r--p 00037000 08:03 394298                     /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.6.2
+7f3ee1fd5000-7f3ee1fd6000 rw-p 00038000 08:03 394298                     /usr/lib/x86_64-linux-gnu/libfontconfig.so.1.6.2
+7f3ee1fd6000-7f3ee1fd7000 rw-p 00000000 00:00 0 
+7f3ee1fd7000-7f3ee201f000 r-xp 00000000 08:03 395733                     /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.3200.5
+7f3ee201f000-7f3ee221f000 ---p 00048000 08:03 395733                     /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.3200.5
+7f3ee221f000-7f3ee2221000 r--p 00048000 08:03 395733                     /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.3200.5
+7f3ee2221000-7f3ee2222000 rw-p 0004a000 08:03 395733                     /usr/lib/x86_64-linux-gnu/libpango-1.0.so.0.3200.5
+7f3ee2222000-7f3ee2240000 r-xp 00000000 08:03 399000                     /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.2800.0
+7f3ee2240000-7f3ee2440000 ---p 0001e000 08:03 399000                     /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.2800.0
+7f3ee2440000-7f3ee2441000 r--p 0001e000 08:03 399000                     /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.2800.0
+7f3ee2441000-7f3ee2442000 rw-p 0001f000 08:03 399000                     /usr/lib/x86_64-linux-gnu/libgdk_pixbuf-2.0.so.0.2800.0
+7f3ee2442000-7f3ee24ef000 r-xp 00000000 08:03 394019                     /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.17
+7f3ee24ef000-7f3ee26ee000 ---p 000ad000 08:03 394019                     /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.17
+7f3ee26ee000-7f3ee26f2000 r--p 000ac000 08:03 394019                     /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.17
+7f3ee26f2000-7f3ee26f4000 rw-p 000b0000 08:03 394019                     /usr/lib/x86_64-linux-gnu/libgdk-x11-2.0.so.0.2400.17
+7f3ee26f4000-7f3ee2b21000 r-xp 00000000 08:03 394220                     /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.17
+7f3ee2b21000-7f3ee2d20000 ---p 0042d000 08:03 394220                     /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.17
+7f3ee2d20000-7f3ee2d27000 r--p 0042c000 08:03 394220                     /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.17
+7f3ee2d27000-7f3ee2d2b000 rw-p 00433000 08:03 394220                     /usr/lib/x86_64-linux-gnu/libgtk-x11-2.0.so.0.2400.17
+7f3ee2d2b000-7f3ee2d2d000 rw-p 00000000 00:00 0 
+7f3ee2d2d000-7f3ee2d3b000 r-xp 00000000 08:03 400010                     /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f3ee2d3b000-7f3ee2f3b000 ---p 0000e000 08:03 400010                     /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f3ee2f3b000-7f3ee2f3c000 r--p 0000e000 08:03 400010                     /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f3ee2f3c000-7f3ee2f3d000 rw-p 0000f000 08:03 400010                     /usr/lib/x86_64-linux-gnu/libXi.so.6.1.0
+7f3ee2f3d000-7f3ee2f42000 r-xp 00000000 08:03 395270                     /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f3ee2f42000-7f3ee3141000 ---p 00005000 08:03 395270                     /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f3ee3141000-7f3ee3142000 r--p 00004000 08:03 395270                     /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f3ee3142000-7f3ee3143000 rw-p 00005000 08:03 395270                     /usr/lib/x86_64-linux-gnu/libXtst.so.6.1.0
+7f3ee3143000-7f3ee314c000 r-xp 00000000 08:03 394143                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f3ee314c000-7f3ee334b000 ---p 00009000 08:03 394143                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f3ee334b000-7f3ee334c000 r--p 00008000 08:03 394143                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f3ee334c000-7f3ee334d000 rw-p 00009000 08:03 394143                     /usr/lib/x86_64-linux-gnu/libXrender.so.1.3.0
+7f3ee334d000-7f3ee3481000 r-xp 00000000 08:03 393672                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f3ee3481000-7f3ee3681000 ---p 00134000 08:03 393672                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f3ee3681000-7f3ee3682000 r--p 00134000 08:03 393672                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f3ee3682000-7f3ee3687000 rw-p 00135000 08:03 393672                     /usr/lib/x86_64-linux-gnu/libX11.so.6.3.0
+7f3ee3687000-7f3ee3698000 r-xp 00000000 08:03 394064                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f3ee3698000-7f3ee3897000 ---p 00011000 08:03 394064                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f3ee3897000-7f3ee3898000 r--p 00010000 08:03 394064                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f3ee3898000-7f3ee3899000 rw-p 00011000 08:03 394064                     /usr/lib/x86_64-linux-gnu/libXext.so.6.4.0
+7f3ee3899000-7f3ee38eb000 r-xp 00000000 08:03 1968226                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/xawt/libmawt.so
+7f3ee38eb000-7f3ee3aeb000 ---p 00052000 08:03 1968226                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/xawt/libmawt.so
+7f3ee3aeb000-7f3ee3aec000 r--p 00052000 08:03 1968226                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/xawt/libmawt.so
+7f3ee3aec000-7f3ee3aef000 rw-p 00053000 08:03 1968226                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/xawt/libmawt.so
+7f3ee3aef000-7f3ee3af0000 rw-p 00000000 00:00 0 
+7f3ee3af0000-7f3ee3b91000 r-xp 00000000 08:03 1838841                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libawt.so
+7f3ee3b91000-7f3ee3d90000 ---p 000a1000 08:03 1838841                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libawt.so
+7f3ee3d90000-7f3ee3d91000 r--p 000a0000 08:03 1838841                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libawt.so
+7f3ee3d91000-7f3ee3d9c000 rw-p 000a1000 08:03 1838841                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libawt.so
+7f3ee3d9c000-7f3ee3dc1000 rw-p 00000000 00:00 0 
+7f3ee3dc1000-7f3ee3dfe000 r-xp 00000000 08:03 1835428                    /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f3ee3dfe000-7f3ee3ffe000 ---p 0003d000 08:03 1835428                    /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f3ee3ffe000-7f3ee3fff000 r--p 0003d000 08:03 1835428                    /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f3ee3fff000-7f3ee4000000 rw-p 0003e000 08:03 1835428                    /lib/x86_64-linux-gnu/libpcre.so.3.13.1
+7f3ee4000000-7f3ee4021000 rw-p 00000000 00:00 0 
+7f3ee4021000-7f3ee8000000 ---p 00000000 00:00 0 
+7f3ee8025000-7f3ee8026000 rw-p 00000000 00:00 0 
+7f3ee8026000-7f3ee802d000 r--s 00000000 08:03 797499                     /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7f3ee802d000-7f3ee802e000 rwxp 00000000 00:00 0 
+7f3ee802e000-7f3ee8033000 r--s 0004c000 08:03 655797                     /usr/lib/jvm/java-7-openjdk-common/jre/lib/jsse.jar
+7f3ee8033000-7f3ee8035000 r--s 00007000 08:03 15207750                   /home/vishnu/.m2/repository/org/swinglabs/swingx/swingx-common/1.6.3/swingx-common-1.6.3.jar
+7f3ee8035000-7f3ee8036000 r--s 00001000 08:03 15207769                   /home/vishnu/.m2/repository/overtone/libs.handlers/0.2.0/libs.handlers-0.2.0.jar
+7f3ee8036000-7f3ee8037000 r--s 00004000 08:03 15207766                   /home/vishnu/.m2/repository/overtone/osc-clj/0.9.0/osc-clj-0.9.0.jar
+7f3ee8037000-7f3ee8040000 r--s 000b0000 08:03 15207780                   /home/vishnu/.m2/repository/org/fife/ui/rsyntaxtextarea/2.0.3/rsyntaxtextarea-2.0.3.jar
+7f3ee8040000-7f3ee8045000 r--s 0003d000 08:03 15207737                   /home/vishnu/.m2/repository/commons-net/commons-net/3.0.1/commons-net-3.0.1.jar
+7f3ee8045000-7f3ee804c000 r-xp 00000000 08:03 394074                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7f3ee804c000-7f3ee824b000 ---p 00007000 08:03 394074                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7f3ee824b000-7f3ee824c000 r--p 00006000 08:03 394074                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7f3ee824c000-7f3ee824d000 rw-p 00007000 08:03 394074                     /usr/lib/x86_64-linux-gnu/libffi.so.6.0.1
+7f3ee824d000-7f3ee8263000 r-xp 00000000 08:03 1835248                    /lib/x86_64-linux-gnu/libresolv-2.17.so
+7f3ee8263000-7f3ee8463000 ---p 00016000 08:03 1835248                    /lib/x86_64-linux-gnu/libresolv-2.17.so
+7f3ee8463000-7f3ee8464000 r--p 00016000 08:03 1835248                    /lib/x86_64-linux-gnu/libresolv-2.17.so
+7f3ee8464000-7f3ee8465000 rw-p 00017000 08:03 1835248                    /lib/x86_64-linux-gnu/libresolv-2.17.so
+7f3ee8465000-7f3ee8467000 rw-p 00000000 00:00 0 
+7f3ee8467000-7f3ee8484000 r-xp 00000000 08:03 1838630                    /lib/x86_64-linux-gnu/libselinux.so.1
+7f3ee8484000-7f3ee8683000 ---p 0001d000 08:03 1838630                    /lib/x86_64-linux-gnu/libselinux.so.1
+7f3ee8683000-7f3ee8684000 r--p 0001c000 08:03 1838630                    /lib/x86_64-linux-gnu/libselinux.so.1
+7f3ee8684000-7f3ee8685000 rw-p 0001d000 08:03 1838630                    /lib/x86_64-linux-gnu/libselinux.so.1
+7f3ee8685000-7f3ee8686000 rw-p 00000000 00:00 0 
+7f3ee8686000-7f3ee8689000 r-xp 00000000 08:03 396965                     /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.3600.0
+7f3ee8689000-7f3ee8888000 ---p 00003000 08:03 396965                     /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.3600.0
+7f3ee8888000-7f3ee8889000 r--p 00002000 08:03 396965                     /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.3600.0
+7f3ee8889000-7f3ee888a000 rw-p 00003000 08:03 396965                     /usr/lib/x86_64-linux-gnu/libgmodule-2.0.so.0.3600.0
+7f3ee888a000-7f3ee8983000 r-xp 00000000 08:03 1835384                    /lib/x86_64-linux-gnu/libglib-2.0.so.0.3600.0
+7f3ee8983000-7f3ee8b83000 ---p 000f9000 08:03 1835384                    /lib/x86_64-linux-gnu/libglib-2.0.so.0.3600.0
+7f3ee8b83000-7f3ee8b84000 r--p 000f9000 08:03 1835384                    /lib/x86_64-linux-gnu/libglib-2.0.so.0.3600.0
+7f3ee8b84000-7f3ee8b85000 rw-p 000fa000 08:03 1835384                    /lib/x86_64-linux-gnu/libglib-2.0.so.0.3600.0
+7f3ee8b85000-7f3ee8b86000 rw-p 00000000 00:00 0 
+7f3ee8b86000-7f3ee8bd3000 r-xp 00000000 08:03 396966                     /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3600.0
+7f3ee8bd3000-7f3ee8dd3000 ---p 0004d000 08:03 396966                     /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3600.0
+7f3ee8dd3000-7f3ee8dd4000 r--p 0004d000 08:03 396966                     /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3600.0
+7f3ee8dd4000-7f3ee8dd5000 rw-p 0004e000 08:03 396966                     /usr/lib/x86_64-linux-gnu/libgobject-2.0.so.0.3600.0
+7f3ee8dd5000-7f3ee8f28000 r-xp 00000000 08:03 396968                     /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.3600.0
+7f3ee8f28000-7f3ee9127000 ---p 00153000 08:03 396968                     /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.3600.0
+7f3ee9127000-7f3ee912b000 r--p 00152000 08:03 396968                     /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.3600.0
+7f3ee912b000-7f3ee912d000 rw-p 00156000 08:03 396968                     /usr/lib/x86_64-linux-gnu/libgio-2.0.so.0.3600.0
+7f3ee912d000-7f3ee912f000 rw-p 00000000 00:00 0 
+7f3ee912f000-7f3ee9131000 r--s 00003000 08:03 15207787                   /home/vishnu/.m2/repository/org/clojure/tools.namespace/0.2.3/tools.namespace-0.2.3.jar
+7f3ee9131000-7f3ee9132000 r--s 00004000 08:03 15207740                   /home/vishnu/.m2/repository/org/clojure/core.logic/0.6.5/core.logic-0.6.5.jar
+7f3ee9132000-7f3ee9133000 r--s 00005000 08:03 15207761                   /home/vishnu/.m2/repository/clj-native/clj-native/0.9.3/clj-native-0.9.3.jar
+7f3ee9133000-7f3ee9136000 r--s 00008000 08:03 15207755                   /home/vishnu/.m2/repository/org/swinglabs/swingx/swingx-plaf/1.6.3/swingx-plaf-1.6.3.jar
+7f3ee9136000-7f3ee9137000 r--s 00002000 08:03 14942906                   /home/vishnu/.m2/repository/org/thnetos/cd-client/0.3.6/cd-client-0.3.6.jar
+7f3ee9137000-7f3ee914e000 r--s 00113000 08:03 15207746                   /home/vishnu/.m2/repository/org/swinglabs/swingx/swingx-core/1.6.3/swingx-core-1.6.3.jar
+7f3ee914e000-7f3ee914f000 r--s 00000000 08:03 14942907                   /home/vishnu/.m2/repository/clojure-complete/clojure-complete/0.2.2/clojure-complete-0.2.2.jar
+7f3ee914f000-7f3ee9154000 r--s 0005f000 08:03 15081999                   /home/vishnu/.m2/repository/overtone/overtone/0.8.1/overtone-0.8.1.jar
+7f3ee9154000-7f3ee916a000 r-xp 00000000 08:03 1838830                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnet.so
+7f3ee916a000-7f3ee9369000 ---p 00016000 08:03 1838830                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnet.so
+7f3ee9369000-7f3ee936a000 r--p 00015000 08:03 1838830                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnet.so
+7f3ee936a000-7f3ee936b000 rw-p 00016000 08:03 1838830                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnet.so
+7f3ee936b000-7f3ee937b000 r-xp 00000000 08:03 1838826                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnio.so
+7f3ee937b000-7f3ee957b000 ---p 00010000 08:03 1838826                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnio.so
+7f3ee957b000-7f3ee957c000 r--p 00010000 08:03 1838826                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnio.so
+7f3ee957c000-7f3ee957d000 rw-p 00011000 08:03 1838826                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libnio.so
+7f3ee957d000-7f3ee9586000 r--s 000bc000 08:03 660212                     /usr/lib/jvm/java-7-openjdk-common/jre/lib/resources.jar
+7f3ee9586000-7f3ee95c0000 r--s 00302000 08:03 14814608                   /home/vishnu/.m2/repository/org/clojure/clojure/1.3.0/clojure-1.3.0.jar
+7f3ee95c0000-7f3ee95c1000 ---p 00000000 00:00 0 
+7f3ee95c1000-7f3ee96c1000 rw-p 00000000 00:00 0                          [stack:8155]
+7f3ee96c1000-7f3ee96c4000 ---p 00000000 00:00 0 
+7f3ee96c4000-7f3ee97c2000 rw-p 00000000 00:00 0                          [stack:8154]
+7f3ee97c2000-7f3ee97c5000 ---p 00000000 00:00 0 
+7f3ee97c5000-7f3ee98c3000 rw-p 00000000 00:00 0                          [stack:8153]
+7f3ee98c3000-7f3ee98c6000 ---p 00000000 00:00 0 
+7f3ee98c6000-7f3ee99c4000 rw-p 00000000 00:00 0                          [stack:8152]
+7f3ee99c4000-7f3ee99c7000 ---p 00000000 00:00 0 
+7f3ee99c7000-7f3ee9ac5000 rw-p 00000000 00:00 0                          [stack:8151]
+7f3ee9ac5000-7f3ee9ac8000 ---p 00000000 00:00 0 
+7f3ee9ac8000-7f3ee9bc6000 rw-p 00000000 00:00 0                          [stack:8150]
+7f3ee9bc6000-7f3ee9bc9000 ---p 00000000 00:00 0 
+7f3ee9bc9000-7f3ee9cc7000 rw-p 00000000 00:00 0                          [stack:8149]
+7f3ee9cc7000-7f3ee9f90000 r--p 00000000 08:03 395799                     /usr/lib/locale/locale-archive
+7f3ee9f90000-7f3ee9f93000 ---p 00000000 00:00 0 
+7f3ee9f93000-7f3eea091000 rw-p 00000000 00:00 0                          [stack:8148]
+7f3eea091000-7f3eea094000 ---p 00000000 00:00 0 
+7f3eea094000-7f3eea192000 rw-p 00000000 00:00 0                          [stack:8147]
+7f3eea192000-7f3eea193000 ---p 00000000 00:00 0 
+7f3eea193000-7f3eebe53000 rw-p 00000000 00:00 0                          [stack:8146]
+7f3eebe53000-7f3eec000000 r--s 01cde000 08:03 1838818                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/rt.jar
+7f3eec000000-7f3eec021000 rw-p 00000000 00:00 0 
+7f3eec021000-7f3ef0000000 ---p 00000000 00:00 0 
+7f3ef0000000-7f3ef0021000 rw-p 00000000 00:00 0 
+7f3ef0021000-7f3ef4000000 ---p 00000000 00:00 0 
+7f3ef4000000-7f3ef4021000 rw-p 00000000 00:00 0 
+7f3ef4021000-7f3ef8000000 ---p 00000000 00:00 0 
+7f3ef8000000-7f3ef8001000 r--s 00002000 08:03 14942904                   /home/vishnu/.m2/repository/clj-http-lite/clj-http-lite/0.2.0/clj-http-lite-0.2.0.jar
+7f3ef8001000-7f3ef8002000 r--s 00005000 08:03 15207739                   /home/vishnu/.m2/repository/org/clojure/core.match/0.2.0-alpha11/core.match-0.2.0-alpha11.jar
+7f3ef8002000-7f3ef8003000 r--s 00000000 08:03 15207778                   /home/vishnu/.m2/repository/j18n/j18n/1.0.1/j18n-1.0.1.jar
+7f3ef8003000-7f3ef8004000 r--s 00001000 08:03 15207767                   /home/vishnu/.m2/repository/overtone/midi-clj/0.5.0/midi-clj-0.5.0.jar
+7f3ef8004000-7f3ef8006000 r--s 00001000 08:03 14812429                   /home/vishnu/.m2/repository/slingshot/slingshot/0.10.3/slingshot-0.10.3.jar
+7f3ef8006000-7f3ef800a000 r--s 00b46000 08:03 15207774                   /home/vishnu/.m2/repository/overtone/scsynth/3.5.7.0/scsynth-3.5.7.0.jar
+7f3ef800a000-7f3ef800e000 r--s 0002f000 08:03 15207736                   /home/vishnu/.m2/repository/javax/jmdns/jmdns/3.4.1/jmdns-3.4.1.jar
+7f3ef800e000-7f3ef8010000 r--s 00008000 08:03 14942900                   /home/vishnu/.m2/repository/org/clojure/tools.nrepl/0.2.1/tools.nrepl-0.2.1.jar
+7f3ef8010000-7f3ef8013000 r--s 0002d000 08:03 14942898                   /home/vishnu/.m2/repository/com/fasterxml/jackson/core/jackson-core/2.0.6/jackson-core-2.0.6.jar
+7f3ef8013000-7f3ef9137000 rw-p 00000000 00:00 0 
+7f3ef9137000-7f3ef9138000 ---p 00000000 00:00 0 
+7f3ef9138000-7f3ef9238000 rw-p 00000000 00:00 0                          [stack:8145]
+7f3ef9238000-7f3ef9239000 ---p 00000000 00:00 0 
+7f3ef9239000-7f3ef9339000 rw-p 00000000 00:00 0                          [stack:8144]
+7f3ef9339000-7f3ef933a000 ---p 00000000 00:00 0 
+7f3ef933a000-7f3ef943a000 rw-p 00000000 00:00 0                          [stack:8143]
+7f3ef943a000-7f3ef943b000 ---p 00000000 00:00 0 
+7f3ef943b000-7f3ef953b000 rw-p 00000000 00:00 0                          [stack:8142]
+7f3ef953b000-7f3ef953c000 ---p 00000000 00:00 0 
+7f3ef953c000-7f3ef963c000 rw-p 00000000 00:00 0                          [stack:8141]
+7f3ef963c000-7f3ef963d000 ---p 00000000 00:00 0 
+7f3ef963d000-7f3ef973d000 rw-p 00000000 00:00 0                          [stack:8140]
+7f3ef973d000-7f3ef973e000 ---p 00000000 00:00 0 
+7f3ef973e000-7f3ef983e000 rw-p 00000000 00:00 0                          [stack:8139]
+7f3ef983e000-7f3ef983f000 ---p 00000000 00:00 0 
+7f3ef983f000-7f3ef9969000 rw-p 00000000 00:00 0                          [stack:8138]
+7f3ef9969000-7f3ef9bd1000 rw-p 00000000 00:00 0 
+7f3ef9bd1000-7f3ef9be2000 rw-p 00000000 00:00 0 
+7f3ef9be2000-7f3ef9c24000 rw-p 00000000 00:00 0 
+7f3ef9c24000-7f3ef9c4e000 rw-p 00000000 00:00 0 
+7f3ef9c4e000-7f3ef9eb6000 rw-p 00000000 00:00 0 
+7f3ef9eb6000-7f3ef9fff000 rw-p 00000000 00:00 0 
+7f3ef9fff000-7f3efa000000 rw-p 00000000 00:00 0 
+7f3efa000000-7f3efa650000 rwxp 00000000 00:00 0 
+7f3efa650000-7f3f00c75000 rw-p 00000000 00:00 0 
+7f3f00c75000-7f3f04000000 ---p 00000000 00:00 0 
+7f3f04000000-7f3f0405c000 rw-p 00000000 00:00 0 
+7f3f0405c000-7f3f041c2000 rw-p 00000000 00:00 0 
+7f3f041c2000-7f3f041ca000 r-xp 00000000 08:03 1838855                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7f3f041ca000-7f3f043c9000 ---p 00008000 08:03 1838855                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7f3f043c9000-7f3f043ca000 r--p 00007000 08:03 1838855                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7f3f043ca000-7f3f043cb000 rw-p 00008000 08:03 1838855                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libzip.so
+7f3f043cb000-7f3f043d7000 r-xp 00000000 08:03 1835274                    /lib/x86_64-linux-gnu/libnss_files-2.17.so
+7f3f043d7000-7f3f045d6000 ---p 0000c000 08:03 1835274                    /lib/x86_64-linux-gnu/libnss_files-2.17.so
+7f3f045d6000-7f3f045d7000 r--p 0000b000 08:03 1835274                    /lib/x86_64-linux-gnu/libnss_files-2.17.so
+7f3f045d7000-7f3f045d8000 rw-p 0000c000 08:03 1835274                    /lib/x86_64-linux-gnu/libnss_files-2.17.so
+7f3f045d8000-7f3f045e3000 r-xp 00000000 08:03 1835268                    /lib/x86_64-linux-gnu/libnss_nis-2.17.so
+7f3f045e3000-7f3f047e2000 ---p 0000b000 08:03 1835268                    /lib/x86_64-linux-gnu/libnss_nis-2.17.so
+7f3f047e2000-7f3f047e3000 r--p 0000a000 08:03 1835268                    /lib/x86_64-linux-gnu/libnss_nis-2.17.so
+7f3f047e3000-7f3f047e4000 rw-p 0000b000 08:03 1835268                    /lib/x86_64-linux-gnu/libnss_nis-2.17.so
+7f3f047e4000-7f3f047fb000 r-xp 00000000 08:03 1835238                    /lib/x86_64-linux-gnu/libnsl-2.17.so
+7f3f047fb000-7f3f049fa000 ---p 00017000 08:03 1835238                    /lib/x86_64-linux-gnu/libnsl-2.17.so
+7f3f049fa000-7f3f049fb000 r--p 00016000 08:03 1835238                    /lib/x86_64-linux-gnu/libnsl-2.17.so
+7f3f049fb000-7f3f049fc000 rw-p 00017000 08:03 1835238                    /lib/x86_64-linux-gnu/libnsl-2.17.so
+7f3f049fc000-7f3f049fe000 rw-p 00000000 00:00 0 
+7f3f049fe000-7f3f04a06000 r-xp 00000000 08:03 1835258                    /lib/x86_64-linux-gnu/libnss_compat-2.17.so
+7f3f04a06000-7f3f04c05000 ---p 00008000 08:03 1835258                    /lib/x86_64-linux-gnu/libnss_compat-2.17.so
+7f3f04c05000-7f3f04c06000 r--p 00007000 08:03 1835258                    /lib/x86_64-linux-gnu/libnss_compat-2.17.so
+7f3f04c06000-7f3f04c07000 rw-p 00008000 08:03 1835258                    /lib/x86_64-linux-gnu/libnss_compat-2.17.so
+7f3f04c07000-7f3f04c32000 r-xp 00000000 08:03 1838840                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7f3f04c32000-7f3f04e31000 ---p 0002b000 08:03 1838840                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7f3f04e31000-7f3f04e32000 r--p 0002a000 08:03 1838840                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7f3f04e32000-7f3f04e34000 rw-p 0002b000 08:03 1838840                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libjava.so
+7f3f04e34000-7f3f04e43000 r-xp 00000000 08:03 1838839                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7f3f04e43000-7f3f05042000 ---p 0000f000 08:03 1838839                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7f3f05042000-7f3f05044000 r--p 0000e000 08:03 1838839                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7f3f05044000-7f3f05045000 rw-p 00010000 08:03 1838839                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/libverify.so
+7f3f05045000-7f3f0504c000 r-xp 00000000 08:03 1835232                    /lib/x86_64-linux-gnu/librt-2.17.so
+7f3f0504c000-7f3f0524b000 ---p 00007000 08:03 1835232                    /lib/x86_64-linux-gnu/librt-2.17.so
+7f3f0524b000-7f3f0524c000 r--p 00006000 08:03 1835232                    /lib/x86_64-linux-gnu/librt-2.17.so
+7f3f0524c000-7f3f0524d000 rw-p 00007000 08:03 1835232                    /lib/x86_64-linux-gnu/librt-2.17.so
+7f3f0524d000-7f3f05261000 r-xp 00000000 08:03 1835423                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3f05261000-7f3f05461000 ---p 00014000 08:03 1835423                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3f05461000-7f3f05462000 r--p 00014000 08:03 1835423                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3f05462000-7f3f05463000 rw-p 00015000 08:03 1835423                    /lib/x86_64-linux-gnu/libgcc_s.so.1
+7f3f05463000-7f3f05566000 r-xp 00000000 08:03 1835264                    /lib/x86_64-linux-gnu/libm-2.17.so
+7f3f05566000-7f3f05766000 ---p 00103000 08:03 1835264                    /lib/x86_64-linux-gnu/libm-2.17.so
+7f3f05766000-7f3f05767000 r--p 00103000 08:03 1835264                    /lib/x86_64-linux-gnu/libm-2.17.so
+7f3f05767000-7f3f05768000 rw-p 00104000 08:03 1835264                    /lib/x86_64-linux-gnu/libm-2.17.so
+7f3f05768000-7f3f0584d000 r-xp 00000000 08:03 397223                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17
+7f3f0584d000-7f3f05a4c000 ---p 000e5000 08:03 397223                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17
+7f3f05a4c000-7f3f05a54000 r--p 000e4000 08:03 397223                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17
+7f3f05a54000-7f3f05a56000 rw-p 000ec000 08:03 397223                     /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.17
+7f3f05a56000-7f3f05a6b000 rw-p 00000000 00:00 0 
+7f3f05a6b000-7f3f06466000 r-xp 00000000 08:03 1838844                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f3f06466000-7f3f06665000 ---p 009fb000 08:03 1838844                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f3f06665000-7f3f066e4000 r--p 009fa000 08:03 1838844                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f3f066e4000-7f3f06707000 rw-p 00a79000 08:03 1838844                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/server/libjvm.so
+7f3f06707000-7f3f06732000 rw-p 00000000 00:00 0 
+7f3f06732000-7f3f06748000 r-xp 00000000 08:03 1835327                    /lib/x86_64-linux-gnu/libz.so.1.2.7
+7f3f06748000-7f3f06947000 ---p 00016000 08:03 1835327                    /lib/x86_64-linux-gnu/libz.so.1.2.7
+7f3f06947000-7f3f06948000 r--p 00015000 08:03 1835327                    /lib/x86_64-linux-gnu/libz.so.1.2.7
+7f3f06948000-7f3f06949000 rw-p 00016000 08:03 1835327                    /lib/x86_64-linux-gnu/libz.so.1.2.7
+7f3f06949000-7f3f06961000 r-xp 00000000 08:03 1835262                    /lib/x86_64-linux-gnu/libpthread-2.17.so
+7f3f06961000-7f3f06b60000 ---p 00018000 08:03 1835262                    /lib/x86_64-linux-gnu/libpthread-2.17.so
+7f3f06b60000-7f3f06b61000 r--p 00017000 08:03 1835262                    /lib/x86_64-linux-gnu/libpthread-2.17.so
+7f3f06b61000-7f3f06b62000 rw-p 00018000 08:03 1835262                    /lib/x86_64-linux-gnu/libpthread-2.17.so
+7f3f06b62000-7f3f06b66000 rw-p 00000000 00:00 0 
+7f3f06b66000-7f3f06b69000 r-xp 00000000 08:03 1835254                    /lib/x86_64-linux-gnu/libdl-2.17.so
+7f3f06b69000-7f3f06d68000 ---p 00003000 08:03 1835254                    /lib/x86_64-linux-gnu/libdl-2.17.so
+7f3f06d68000-7f3f06d69000 r--p 00002000 08:03 1835254                    /lib/x86_64-linux-gnu/libdl-2.17.so
+7f3f06d69000-7f3f06d6a000 rw-p 00003000 08:03 1835254                    /lib/x86_64-linux-gnu/libdl-2.17.so
+7f3f06d6a000-7f3f06f28000 r-xp 00000000 08:03 1835252                    /lib/x86_64-linux-gnu/libc-2.17.so
+7f3f06f28000-7f3f07127000 ---p 001be000 08:03 1835252                    /lib/x86_64-linux-gnu/libc-2.17.so
+7f3f07127000-7f3f0712b000 r--p 001bd000 08:03 1835252                    /lib/x86_64-linux-gnu/libc-2.17.so
+7f3f0712b000-7f3f0712d000 rw-p 001c1000 08:03 1835252                    /lib/x86_64-linux-gnu/libc-2.17.so
+7f3f0712d000-7f3f07132000 rw-p 00000000 00:00 0 
+7f3f07132000-7f3f0713f000 r-xp 00000000 08:03 1838823                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f3f0713f000-7f3f0733e000 ---p 0000d000 08:03 1838823                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f3f0733e000-7f3f0733f000 r--p 0000c000 08:03 1838823                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f3f0733f000-7f3f07340000 rw-p 0000d000 08:03 1838823                    /usr/lib/jvm/java-7-openjdk-amd64/jre/lib/amd64/jli/libjli.so
+7f3f07340000-7f3f07363000 r-xp 00000000 08:03 1835244                    /lib/x86_64-linux-gnu/ld-2.17.so
+7f3f07363000-7f3f07364000 r--s 00000000 08:03 15207773                   /home/vishnu/.m2/repository/clj-glob/clj-glob/1.0.0/clj-glob-1.0.0.jar
+7f3f07364000-7f3f07366000 r--s 0001d000 08:03 15207775                   /home/vishnu/.m2/repository/seesaw/seesaw/1.4.2/seesaw-1.4.2.jar
+7f3f07366000-7f3f07368000 r--s 0000b000 08:03 14942899                   /home/vishnu/.m2/repository/com/fasterxml/jackson/dataformat/jackson-dataformat-smile/2.0.6/jackson-dataformat-smile-2.0.6.jar
+7f3f07368000-7f3f0736a000 r--s 0001b000 08:03 15207742                   /home/vishnu/.m2/repository/com/jgoodies/forms/1.2.1/forms-1.2.1.jar
+7f3f0736a000-7f3f0736e000 r--s 00b6f000 08:03 15207776                   /home/vishnu/.m2/repository/overtone/scsynth-extras/3.5.7.0/scsynth-extras-3.5.7.0.jar
+7f3f0736e000-7f3f07370000 r--s 00008000 08:03 15207749                   /home/vishnu/.m2/repository/org/swinglabs/swingx/swingx-autocomplete/1.6.3/swingx-autocomplete-1.6.3.jar
+7f3f07370000-7f3f07374000 r--s 000f3000 08:03 15207733                   /home/vishnu/.m2/repository/net/java/dev/jna/jna/3.4.0/jna-3.4.0.jar
+7f3f07374000-7f3f07378000 r--s 0002e000 08:03 15207745                   /home/vishnu/.m2/repository/com/miglayout/miglayout/3.7.4/miglayout-3.7.4.jar
+7f3f07378000-7f3f073f3000 rw-p 00000000 00:00 0 
+7f3f073f3000-7f3f07435000 rw-p 00000000 00:00 0 
+7f3f07435000-7f3f07438000 ---p 00000000 00:00 0 
+7f3f07438000-7f3f0753b000 rw-p 00000000 00:00 0                          [stack:8136]
+7f3f0753b000-7f3f0753c000 r--s 00002000 08:03 14942908                   /home/vishnu/.m2/repository/cheshire/cheshire/4.0.3/cheshire-4.0.3.jar
+7f3f0753c000-7f3f0753d000 r--s 00000000 08:03 14946460                   /home/vishnu/.m2/repository/org/clojure/core.incubator/0.1.0/core.incubator-0.1.0.jar
+7f3f0753d000-7f3f0753e000 r--s 00001000 08:03 15207762                   /home/vishnu/.m2/repository/overtone/at-at/1.1.1/at-at-1.1.1.jar
+7f3f0753e000-7f3f0753f000 r--s 00007000 08:03 15207751                   /home/vishnu/.m2/repository/org/swinglabs/swingx/swingx-action/1.6.3/swingx-action-1.6.3.jar
+7f3f0753f000-7f3f07540000 r--s 00001000 08:03 15207734                   /home/vishnu/.m2/repository/org/clojure/data.json/0.1.2/data.json-0.1.2.jar
+7f3f07540000-7f3f07542000 r--s 00000000 08:03 15207764                   /home/vishnu/.m2/repository/overtone/byte-spec/0.3.1/byte-spec-0.3.1.jar
+7f3f07542000-7f3f07544000 r--s 0000f000 08:03 15207756                   /home/vishnu/.m2/repository/org/swinglabs/swingx/swingx-painters/1.6.3/swingx-painters-1.6.3.jar
+7f3f07544000-7f3f07548000 r--s 00085000 08:03 788408                     /usr/lib/jvm/java-7-openjdk-common/jre/lib/ext/localedata.jar
+7f3f07548000-7f3f0754b000 r--s 0003c000 08:03 788407                     /usr/lib/jvm/java-7-openjdk-common/jre/lib/ext/sunpkcs11.jar
+7f3f0754b000-7f3f0754c000 r--s 00002000 08:03 789688                     /usr/lib/jvm/java-7-openjdk-common/jre/lib/ext/dnsns.jar
+7f3f0754c000-7f3f0754f000 r--s 0000f000 08:03 792928                     /usr/lib/jvm/java-7-openjdk-common/jre/lib/ext/pulse-java.jar
+7f3f0754f000-7f3f07551000 r--s 00006000 08:03 927846                     /usr/share/java/java-atk-wrapper.jar
+7f3f07551000-7f3f07553000 r--s 00012000 08:03 792168                     /usr/lib/jvm/java-7-openjdk-common/jre/lib/ext/zipfs.jar
+7f3f07553000-7f3f07556000 r--s 00032000 08:03 788409                     /usr/lib/jvm/java-7-openjdk-common/jre/lib/ext/sunjce_provider.jar
+7f3f07556000-7f3f0755e000 rw-s 00000000 08:03 15082077                   /tmp/hsperfdata_vishnu/8131
+7f3f0755e000-7f3f0755f000 rw-p 00000000 00:00 0 
+7f3f0755f000-7f3f07560000 r--p 00000000 00:00 0 
+7f3f07560000-7f3f07562000 rw-p 00000000 00:00 0 
+7f3f07562000-7f3f07563000 r--p 00022000 08:03 1835244                    /lib/x86_64-linux-gnu/ld-2.17.so
+7f3f07563000-7f3f07565000 rw-p 00023000 08:03 1835244                    /lib/x86_64-linux-gnu/ld-2.17.so
+7fff42ce6000-7fff42d09000 rw-p 00000000 00:00 0                          [stack]
+7fff42d9f000-7fff42da1000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+7f3f07560000-7f3f07562000 rw-p 00000000 00:00 0 
+7f3f07562000-7f3f07563000 r--p 00022000 08:03 1835244                    /lib/x86_64-linux-gnu/ld-2.17.so
+7f3f07563000-7f3f07565000 rw-p 00023000 08:03 1835244                    /lib/x86_64-linux-gnu/ld-2.17.so
+7fff42ce6000-7fff42d09000 rw-p 00000000 00:00 0                          [stack]
+7fff42d9f000-7fff42da1000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+
+VM Arguments:
+jvm_args: -XX:+TieredCompilation -XX:TieredStopAtLevel=1 -Dclojure.compile.path=/home/vishnu/Documents/markovmusic/target/classes -Dmarkovmusic.version=0.1.0-SNAPSHOT -Dfile.encoding=UTF-8 -Dclojure.debug=false -Djava.library.path=/home/vishnu/Documents/markovmusic/target/native/linux/x86_64 
+java_command: clojure.main -e (do (set! *warn-on-reflection* nil) (do (try (clojure.core/require (quote markovmusic.core)) (catch java.lang.Exception e__4370__auto__ (clojure.core/println e__4370__auto__) (clojure.core/ns markovmusic.core))) (try (clojure.core/require (quote clojure.tools.nrepl.server)) (catch java.lang.Throwable t__4371__auto__ (clojure.core/println "Error loading" (clojure.core/str (quote clojure.tools.nrepl.server) ":") (clojure.core/or (.getMessage t__4371__auto__) (clojure.core/type t__4371__auto__))))) (try (clojure.core/require (quote complete.core)) (catch java.lang.Throwable t__4371__auto__ (clojure.core/println "Error loading" (clojure.core/str (quote complete.core) ":") (clojure.core/or (.getMessage t__4371__auto__) (clojure.core/type t__4371__auto__)))))) (do nil (clojure.core/let [server__4368__auto__ (clojure.tools.nrepl.server/start-server :bind "127.0.0.1" :port 0 :ack-port 47130 :handler (clojure.tools.nrepl.server/default-handler (clojure.core/with-local-vars [wrap-init-ns__4327__auto__ (clojure.core/fn [h__4328__auto__] (clojure.core/with-local-vars [init-ns-sentinel__4329__auto__ nil] (clojure.core/fn [{:as msg__4330__auto__, :keys [session]}] (clojure.core/when-not ((clojure.core/deref session) init-ns-sentinel__4329__auto__) (clojure.core/swap! session clojure.core/assoc (var clojure.core/*ns*) (try (clojure.core/require (quote markovmusic.core)) (clojure.core/create-ns (quote markovmusic.core)) (catch java.lang.Throwable t__4331__auto__ (clojure.core/create-ns (quote user)))) init-ns-sentinel__4329__auto__ true)) (h__4328__auto__ msg__4330__auto__))))] (clojure.core/doto wrap-init-ns__4327__auto__ (clojure.tools.nrepl.middleware/set-descriptor! {:requires #{(var clojure.tools.nrepl.middleware.session/session)}, :expects #{"eval"}}) (clojure.core/alter-var-root (clojure.core/constantly (clojure.core/deref wrap-init-ns__4327__auto__))))))) port__4369__auto__ (clojure.core/-> server__4368__auto__ clojure.core/deref :ss .getLoca
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+CLASSPATH=:/home/vishnu/.lein/self-installs/leiningen-2.1.3-standalone.jar
+PATH=/usr/local/heroku/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/vishnu/bin
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x857ed0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x857ed0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x6f8ab0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x6f8ab0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x6f8ab0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x6f8ab0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x6f8e80], sa_mask[0]=0x00000004, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x6f8fc0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x6f8fc0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x6f8fc0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x6f8fc0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:Ubuntu 13.04 (raring)
+uname:Linux 3.8.0-25-generic #37-Ubuntu SMP Thu Jun 6 20:47:07 UTC 2013 x86_64
+libc:glibc 2.17 NPTL 2.17 
+rlimit: STACK 8192k, CORE 0k, NPROC 62960, NOFILE 4096, AS infinity
+load average:0.61 0.36 0.42
+
+/proc/meminfo:
+MemTotal:        8077964 kB
+MemFree:          270456 kB
+Buffers:           47964 kB
+Cached:          1340616 kB
+SwapCached:            0 kB
+Active:          6468260 kB
+Inactive:        1081916 kB
+Active(anon):    6204944 kB
+Inactive(anon):   838956 kB
+Active(file):     263316 kB
+Inactive(file):   242960 kB
+Unevictable:          16 kB
+Mlocked:              16 kB
+SwapTotal:             0 kB
+SwapFree:              0 kB
+Dirty:               140 kB
+Writeback:             0 kB
+AnonPages:       6162636 kB
+Mapped:           254176 kB
+Shmem:            882296 kB
+Slab:              99784 kB
+SReclaimable:      54628 kB
+SUnreclaim:        45156 kB
+KernelStack:        6568 kB
+PageTables:        57000 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     4038980 kB
+Committed_AS:   12864376 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:      583324 kB
+VmallocChunk:   34359132636 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       75776 kB
+DirectMap2M:     8220672 kB
+
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 58 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, ht, tsc, tscinvbit, tscinv
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3720QM CPU @ 2.60GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 1200.000
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 8
+core id		: 0
+cpu cores	: 4
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 5188.45
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3720QM CPU @ 2.60GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 1200.000
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 8
+core id		: 0
+cpu cores	: 4
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 5188.45
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3720QM CPU @ 2.60GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 1300.000
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 5188.45
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3720QM CPU @ 2.60GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 1200.000
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 8
+core id		: 1
+cpu cores	: 4
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 5188.45
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3720QM CPU @ 2.60GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 1200.000
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 8
+core id		: 2
+cpu cores	: 4
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 5188.45
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3720QM CPU @ 2.60GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 1200.000
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 8
+core id		: 2
+cpu cores	: 4
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 5188.45
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3720QM CPU @ 2.60GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 2601.000
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 8
+core id		: 3
+cpu cores	: 4
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 5188.45
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: GenuineIntel
+cpu family	: 6
+model		: 58
+model name	: Intel(R) Core(TM) i7-3720QM CPU @ 2.60GHz
+stepping	: 9
+microcode	: 0x12
+cpu MHz		: 1200.000
+cache size	: 6144 KB
+physical id	: 0
+siblings	: 8
+core id		: 3
+cpu cores	: 4
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp lm constant_tsc arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc aperfmperf eagerfpu pni pclmulqdq dtes64 monitor ds_cpl vmx smx est tm2 ssse3 cx16 xtpr pdcm pcid sse4_1 sse4_2 x2apic popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm ida arat epb xsaveopt pln pts dtherm tpr_shadow vnmi flexpriority ept vpid fsgsbase smep erms
+bogomips	: 5188.45
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 8077964k(270456k free), swap 0k(0k free)
+
+vm_info: OpenJDK 64-Bit Server VM (23.7-b01) for linux-amd64 JRE (1.7.0_21-b02), built on Apr 22 2013 07:43:15 by "buildd" with gcc 4.7.3
+
+time: Fri Jun 28 12:06:35 2013
+elapsed time: 8 seconds
+
